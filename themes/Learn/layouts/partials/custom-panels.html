@@ -1,0 +1,21 @@
+{{ if .Site.Params.otherSites}}
+<h1>{{ .Site.Params.description }}</h1>
+{{end}}
+
+{{with .Site.Params.otherSites}}
+<section class="panel-section">
+  <div class="container">
+    <div class="row">
+      {{ range . }}
+      <div class="panel-container">
+        <a href="{{ .url | absLangURL }}" class="panel-link">
+          <i class="{{ .icon }} panel-icon"></i>
+          <h3 class="panel-title">{{ safeHTML .name }}</h3>
+          <p class="panel-description">{{ safeHTML .description }}</p>
+        </a>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
