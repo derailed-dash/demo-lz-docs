@@ -1,8 +1,8 @@
 # Appspot default URL is VERSION-dot-SERVICE-dot-PROJECT_ID.REGION_ID.r.appspot.com
 # We can shorten https://<svc>-dot-<prj>.nw.r.appspot.com/ to https://<svc>-dot-<prj>.appspot.com/
 # baseURL is not used when running locally on localhost
-baseURL: "https://partnership-cloud-portal-dot-pit-shared-portal.appspot.com"
-title: "Partnership Cloud Portal"
+baseURL: "https://lz-demo-docs-cloud-portal-dot-pit-shared-portal.appspot.com"
+title: "LZ-Demo Cloud Portal"
 
 # Not advised to change these unless you know what you're doing!
 publishDir: "../app/www"
@@ -35,7 +35,7 @@ params:
   disableAssetsBusting: false
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby: "weight"
-  styleCookie: "partnership-cloud-portal-dot-pit-shared-portal.appspot.com"
+  styleCookie: "lz-demo-docs-cloud-portal-dot-pit-shared-portal.appspot.com"
   
 menu:
   shortcuts:

@@ -43,7 +43,7 @@ Google groups for use in GCP must have prefix:
 - jl_gcp
 - wtr_gcp
 - epam_gcp
-- epam_gcp_pdp   (for use on any group used in Partnership Data Platform)
+- epam_gcp_pdp   (for use on any group used in LZ-Demo Data Platform)
 
 The rest of the group name would normally be based around the team who form the membership and their role. If different permissions are required for different people, then use team names with admin, developer, viewer or similar.
 
@@ -105,7 +105,7 @@ As a manager of a group you must follow the conditions of use as laid out below.
 - Must ensure movers and leavers are removed from the group.
 - Must perform monthly checks that the membership is up to date.
 - Must ensure anyone else appointed a group manager is given these conditions of use.
-- Must ensure manager duties are passed on if you leave the partnership (If this doesn’t happen then a request will be necessary to G-Suite admin team to appoint a new manager).
+- Must ensure manager duties are passed on if you leave the organisation (If this doesn’t happen then a request will be necessary to G-Suite admin team to appoint a new manager).
 - Must only use gcp named groups as nested entries since other groups were not created for the purpose of assigning permissions in Google Cloud Platform. However we do not recommend nesting groups (see below).
 
 The following are recommendations:

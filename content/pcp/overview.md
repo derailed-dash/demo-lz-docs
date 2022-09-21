@@ -12,7 +12,7 @@ weight: 5
 
 ## What is ECP
 
-ECP is our strategic enterprise **EPAM Cloud Platform**.  It is a GCP-based platform, intended for the hosting of off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both. (ECP has previously been known as other names, including _PSEG_, and the _Partnership Strategic GCP Hybrid Cloud_.)
+ECP is our strategic enterprise **EPAM Cloud Platform**.  It is a GCP-based platform, intended for the hosting of off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both. (ECP has previously been known as other names, including _PSEG_, and the _LZ-Demo Strategic GCP Hybrid Cloud_.)
 
 ## Motivation for ECP
 

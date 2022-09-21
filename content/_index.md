@@ -6,11 +6,11 @@ weight: 1
 
 # {{< param title >}}
 
-## Welcome to the Partnership Cloud Portal
+## Welcome to the LZ-Demo Cloud Portal
 
 Here you will find documentation and guidance related to:
 
-- The Partnership's use of public cloud
+- The LZ-Demo's use of public cloud
 - The EPAM Cloud Platform (ECP)
 - Cloud principles
 - Design

@@ -73,11 +73,11 @@ appropriate documentation for what's available.
 
 ## Workflow
 
-Cloud team had internally agreed to follow a trunk based development model for our GitLab repos. However, during development of the Partnership Data Platform, we have worked alongside Appsbroker following a Git Flow workflow. So currently we are using different workflows in different places, this will be described below.
+Cloud team had internally agreed to follow a trunk based development model for our GitLab repos. However, during development of the LZ-Demo Data Platform, we have worked alongside Appsbroker following a Git Flow workflow. So currently we are using different workflows in different places, this will be described below.
 
 ### Git Flow - Our implementation
 
-As mentioned above, while working alongside Appsbroker we have been following a Git Flow workflow to develop Terraform code for the Partnership Data Platform in GitLab. The exact workflow we have been following where a Git Flow workflow is being used is as follows:
+As mentioned above, while working alongside Appsbroker we have been following a Git Flow workflow to develop Terraform code for the LZ-Demo Data Platform in GitLab. The exact workflow we have been following where a Git Flow workflow is being used is as follows:
 
 - **Any** changes, no matter how small or big should be developed in a new feature branch
 - Once feature branch development is believed to be ready to be merged, the developing engineer must squash all of their commits.

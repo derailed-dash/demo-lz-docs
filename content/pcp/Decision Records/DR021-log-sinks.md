@@ -37,7 +37,7 @@ A number of log sinks will be implemented in the IaaS Platform to allow Security
 
 ## Context
 
-Security Operations require the monitoring of certain logs/metrics from the IaaS Platform. Logging sinks are a tool in GCP that can be used to achieve this and have been used in a similar integration previously for the Legacy Partnership Data Platform (PDP).
+Security Operations require the monitoring of certain logs/metrics from the IaaS Platform. Logging sinks are a tool in GCP that can be used to achieve this and have been used in a similar integration previously for the Legacy LZ-Demo Data Platform (PDP).
 
 Based off requirements given to use by security, we have set up the following infrastructure in the IaaS Platform
 

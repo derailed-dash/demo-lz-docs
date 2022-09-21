@@ -1,6 +1,6 @@
 # pit-cloud-team-portal
 
-This is the documentation repo for the Partnership Cloud Portal.  Here you will find:
+This is the documentation repo for the LZ-Demo Cloud Portal.  Here you will find:
 
 - Content for the portal site itself
 - Instructions on how to modify the content

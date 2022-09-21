@@ -38,7 +38,7 @@ Labels will
 - be used on **all** environments within the PIT IaaS Platform.
 - be created as part of the infrastructure as code, not by hand.
 - follow the standard defined for each label in this record.
-- be as static as possible. (An example of where a label might change is if owners change roles or leave the partnership).
+- be as static as possible. (An example of where a label might change is if owners change roles or leave the organisation).
 - use the following format due to label character restrictions: keys will use \- in place of spaces and values will use \_ in place of spaces. Any other substitutions will be defined elsewhere in this record.
 
 {{% notice info %}}
@@ -61,7 +61,7 @@ Service: **Resource Manager**
 
 - Projects
   - **business-owner**, Must be set as partners email prefix with . replaced with \_ due to label character restrictions. (e.g. james.c.hoare@waitrose.co.uk would be james_c_hoare)
-  - **epam-project**, The EPAM project the GCP project belongs/relates to (e.g. partnership_data_platform, merch_ops, ...)
+  - **epam-project**, The EPAM project the GCP project belongs/relates to (e.g. organisation_data_platform, merch_ops, ...)
 
 Service: **Compute Engine**
 
