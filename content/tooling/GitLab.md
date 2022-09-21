@@ -46,9 +46,9 @@ cross-charging back to us!)
 - The PDP / AW systems have GKE clusters for each system / environment combination
 which run the pipelines for those systems.  The available AW/PDP runners are [documented here](https://docs.google.com/spreadsheets/d/1haqwO_7p2RGjL6lUz3XjeQk0_pkqnPl-hAloDouq47g/edit#gid=2037107266).
 
-- The IaaS system has a GCE instance providing its runner.  It is [documented here](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-shared-gitlab/-/tree/master).
+- The IaaS system has a GCE instance providing its runner.  It is [documented here](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-gitlab/-/tree/master).
 
-- The PIT Platform Cloud team have a pair of GKE clusters, pit-prd and pit-npd,
+- The PIT Platform Cloud team have a pair of GKE clusters, lz-prd and lz-npd,
 which contain the runners for: the APAS (legacy PDP) system; the terraform-gcloud
 docker build, and various other pipelines in the team's gitlab group.  They are
 [documented here](https://docs.google.com/spreadsheets/d/10mqzgZ7A21h0sPu7YzE4GhXcLg8utlGTu2PzUlnYQnU/edit#gid=0)

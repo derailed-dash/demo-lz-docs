@@ -1,7 +1,7 @@
 # Appspot default URL is VERSION-dot-SERVICE-dot-PROJECT_ID.REGION_ID.r.appspot.com
 # We can shorten https://<svc>-dot-<prj>.nw.r.appspot.com/ to https://<svc>-dot-<prj>.appspot.com/
 # baseURL is not used when running locally on localhost
-baseURL: "https://lz-demo-docs-cloud-portal-dot-pit-shared-portal.appspot.com"
+baseURL: "https://lz-demo-docs-cloud-portal-dot-lz-shared-portal.appspot.com"
 title: "LZ-Demo Cloud Portal"
 
 # Not advised to change these unless you know what you're doing!
@@ -24,8 +24,8 @@ theme: "Learn"
 # Site parameters
 # See: https://learn.netlify.com/en/basics/configuration/
 params:
-  editURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/tree/master/content/"
-  commitURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/onboarding/commit/"
+  editURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/tree/master/content/"
+  commitURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/onboarding/commit/"
   author: "Cloud Centre of Excellence"
   description: "Documentation for the EPAM Cloud Platform"
   showVisitedLinks: true
@@ -35,10 +35,10 @@ params:
   disableAssetsBusting: false
   # Order sections in menu by "weight" or "title". Default to "weight"
   ordersectionsby: "weight"
-  styleCookie: "lz-demo-docs-cloud-portal-dot-pit-shared-portal.appspot.com"
+  styleCookie: "lz-demo-docs-cloud-portal-dot-lz-shared-portal.appspot.com"
   
 menu:
   shortcuts:
   - name: "<i class='fab fa-gitlab'></i> Git Repo"
-    url: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/"
+    url: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/"
     weight: 99

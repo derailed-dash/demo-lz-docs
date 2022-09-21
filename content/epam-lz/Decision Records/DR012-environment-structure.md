@@ -66,15 +66,15 @@ classDef folder fill:yellow,stroke:#444,stroke-width:1.5px
 classDef project fill:orange,stroke:#444,stroke-width:1.5px
 A[fa:fa-folder PIT Shared IaaS] --> B[fa:fa-folder Non-Production IaaS]
 A --> C[fa:fa-folder Production IaaS]
-A --> D(fa:fa-project-diagram pit-iaas-operations-devops)
+A --> D(fa:fa-project-diagram lz-iaas-operations-devops)
 B --> E[fa:fa-folder Applications]
 B --> F[fa:fa-folder Infrastructure]
 C --> G[fa:fa-folder Applications]
 C --> H[fa:fa-folder Infrastructure]
-E --> I(fa:fa-project-diagram pit-some-project-dev)
-E --> J(fa:fa-project-diagram pit-some-project-tst)
-E --> K(fa:fa-project-diagram pit-some-project-rel)
-G --> L(fa:fa-project-diagram pit-some-project-prd)
+E --> I(fa:fa-project-diagram lz-some-project-dev)
+E --> J(fa:fa-project-diagram lz-some-project-tst)
+E --> K(fa:fa-project-diagram lz-some-project-rel)
+G --> L(fa:fa-project-diagram lz-some-project-prd)
 I --> M((fa:fa-server vm-dev1))
 J --> N((fa:fa-server vm-tst1))
 K --> O((fa:fa-server vm-rel1))
@@ -131,13 +131,13 @@ classDef folder fill:yellow,stroke:#444,stroke-width:1.5px
 classDef project fill:orange,stroke:#444,stroke-width:1.5px
 A1[fa:fa-folder PIT Shared IaaS] --> B1[fa:fa-folder Non-Production IaaS]
 A1 --> C1[fa:fa-folder Production IaaS]
-A1 --> D1(fa:fa-project-diagram pit-iaas-operations-devops)
+A1 --> D1(fa:fa-project-diagram lz-iaas-operations-devops)
 B1 --> E1[fa:fa-folder Applications]
 B1 --> F1[fa:fa-folder Infrastructure]
 C1 --> G1[fa:fa-folder Applications]
 C1 --> H1[fa:fa-folder Infrastructure]
-E1 --> I1(fa:fa-project-diagram pit-some-project-npd)
-G1 --> L1(fa:fa-project-diagram pit-some-project-prd)
+E1 --> I1(fa:fa-project-diagram lz-some-project-npd)
+G1 --> L1(fa:fa-project-diagram lz-some-project-prd)
 I1 --> M1((fa:fa-server vm-dev1))
 I1 --> N1((fa:fa-server vm-tst1))
 I1 --> O1((fa:fa-server vm-rel1))

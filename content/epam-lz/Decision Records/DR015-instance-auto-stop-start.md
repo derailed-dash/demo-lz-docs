@@ -53,7 +53,7 @@ Each Service Project will contain two Cloud Functions as follows. These Cloud Fu
 
 #### start_gce_instances
 
-This function will start instances based on the JSON message that triggers it (detailed below). The function source code is managed in the [pit-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-shared-functions) GitLab repo. The [pit-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-shared-functions) GitLab repo uploads Cloud Function source code to buckets in the [pit-shared-functions](https://console.cloud.google.com/compute/instances?project=pit-shared-functions) GCP Project. Terraform is then able to point to the buckets for the source code when setting these functions up for the Service Projects. This also allows the source code for these shared functions to be used outside of the IaaS Platform in the future.
+This function will start instances based on the JSON message that triggers it (detailed below). The function source code is managed in the [lz-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-functions) GitLab repo. The [lz-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-functions) GitLab repo uploads Cloud Function source code to buckets in the [lz-shared-functions](https://console.cloud.google.com/compute/instances?project=lz-shared-functions) GCP Project. Terraform is then able to point to the buckets for the source code when setting these functions up for the Service Projects. This also allows the source code for these shared functions to be used outside of the IaaS Platform in the future.
 
 JSON Message format:
 
@@ -89,7 +89,7 @@ A label with a **key** of **ignore_start_vm** and a **value** of **true** will b
 
 #### stop_gce_instances
 
-This function will stop instances based on the JSON message that triggers it (detailed below). The function source code is managed in the [pit-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-shared-functions) GitLab repo. The [pit-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-shared-functions) GitLab repo uploads Cloud Function source code to buckets in the [pit-shared-functions](https://console.cloud.google.com/compute/instances?project=pit-shared-functions) GCP Project. Terraform is then able to point to the buckets for the source code when setting these functions up for the Service Projects. This also allows the source code for these shared functions to be used outside of the IaaS Platform in the future.
+This function will stop instances based on the JSON message that triggers it (detailed below). The function source code is managed in the [lz-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-functions) GitLab repo. The [lz-shared-functions](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-functions) GitLab repo uploads Cloud Function source code to buckets in the [lz-shared-functions](https://console.cloud.google.com/compute/instances?project=lz-shared-functions) GCP Project. Terraform is then able to point to the buckets for the source code when setting these functions up for the Service Projects. This also allows the source code for these shared functions to be used outside of the IaaS Platform in the future.
 
 JSON Message format:
 

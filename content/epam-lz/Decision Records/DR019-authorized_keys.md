@@ -63,14 +63,14 @@ troublesome.  Storing the files in a git repo, and syncing the repo to the bucke
 cleaner approach.  The only niggle here is that the JOL Ab Initio Support team have little prior experience of GitLab.
 (However the same is true of the GCP console, and at least the GitLab console provides a Web IDE).
 
-[Terraform code](https://gitlab.com/Lz-demo-docs/pit_platform/pit-iaas/abinitio/blob/master/terraform/authorized_keys.tf) to create bucket
+[Terraform code](https://gitlab.com/Lz-demo-docs/pit_platform/lz-iaas/abinitio/blob/master/terraform/authorized_keys.tf) to create bucket
 
-[Ansible code](https://wtr-wscm-sourcerepo.epam.com/projects/AAN/repos/pit-install-abinitio/browse/tasks/create_users.yml?at=refs%2Fheads%2Fdevel#133) for syncing bucket to VM
+[Ansible code](https://wtr-wscm-sourcerepo.epam.com/projects/AAN/repos/lz-install-abinitio/browse/tasks/create_users.yml?at=refs%2Fheads%2Fdevel#133) for syncing bucket to VM
 
-[GitLab CI](https://gitlab.com/Lz-demo-docs/pit_platform/pit-iaas/abinitio-ops) for syncing repo to bucket
+[GitLab CI](https://gitlab.com/Lz-demo-docs/pit_platform/lz-iaas/abinitio-ops) for syncing repo to bucket
 
 Shell command for impatient Gateway VM users to trigger 
-[Ansible Tower template](https://pit-ansible-tower.epam.com/#/templates/job_template/199)  
+[Ansible Tower template](https://lz-ansible-tower.epam.com/#/templates/job_template/199)  
 `eval $(curl -s "http://metadata.google.internal/computeMetadata/v1/instance/attributes/deployment-script-1" -H "Metadata-Flavor: Google")`
 
 ---

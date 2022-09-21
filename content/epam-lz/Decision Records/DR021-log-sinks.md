@@ -43,7 +43,7 @@ Based off requirements given to use by security, we have set up the following in
 
 #### One GCP Project
 
-- **pit-iaas-secops**
+- **lz-iaas-secops**
   - Description: A project to house any resources related to log intergation to on prem that need to reside in a GCP Project.
   - Location: **PIT Shared IaaS** Folder
 
@@ -63,28 +63,28 @@ Based off requirements given to use by security, we have set up the following in
 #### Two Pub/Sub topics
 
 - **unix_sink_topic**
-  - Location: **pit-iaas-secops** Project
+  - Location: **lz-iaas-secops** Project
   - Description: A Pub/Sub topic to act as the destination for the **unix_sink** logging sink
 - **windows_sink_topic**
-  - Location: **pit-iaas-secops** Project
+  - Location: **lz-iaas-secops** Project
   - Description: A Pub/Sub topic to act as the destination for the **windows_sink** logging sink
 
 #### Two Pub/Sub subscriptions
 
 - **unix_sink_subscription**
-  - Location: **pit-iaas-secops** Project
+  - Location: **lz-iaas-secops** Project
   - Description: A Pub/Sub subscription to the **unix_sink_topic** pub/sub topic. This subscription is required for a service account (to be used by Splunk) to pull the logs sent through the topic.
 - **windows_sink_subscription**
-  - Location: **pit-iaas-secops** Project
+  - Location: **lz-iaas-secops** Project
   - Description: A Pub/Sub subscription to the **windows_sink_topic** pub/sub topic. This subscription is required for a service account (to be used by Splunk) to pull the logs sent through the topic.
 
 #### Two service accounts
 
-- **splunk-unix-sink@pit-iaas-secops.iam.gserviceaccount.com**
-  - Location: **pit-iaas-secops** Project
+- **splunk-unix-sink@lz-iaas-secops.iam.gserviceaccount.com**
+  - Location: **lz-iaas-secops** Project
   - Description: A service account to be used by Splunk to pull UNIX OS logs from the IaaS Platform using the **unix_sink_subscription**
-- **splunk-windows-sink@pit-iaas-secops.iam.gserviceaccount.com**
-  - Location: **pit-iaas-secops** Project
+- **splunk-windows-sink@lz-iaas-secops.iam.gserviceaccount.com**
+  - Location: **lz-iaas-secops** Project
   - Description: A service account to be used by Splunk to pull windows OS logs from the IaaS Platform logs using the **windows_sink_subscription**
 
 ---

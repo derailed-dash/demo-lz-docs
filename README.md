@@ -1,4 +1,4 @@
-# pit-cloud-team-portal
+# lz-demo-docs
 
 This is the documentation repo for the LZ-Demo Cloud Portal.  Here you will find:
 
@@ -13,6 +13,7 @@ This is the documentation repo for the LZ-Demo Cloud Portal.  Here you will find
 ├── app/                         - The template for the Google App Engine Python web applicaton
 ├── content/                     - Where the portal content lives. THIS IS WHAT YOU UPDATE.
 ├── src/                         - Hugo configuration and themes
+├── themes/                      - In case we want to build using GitLab Hugo project
 ├── README.md                    - This file
 ├── .gitlab-ci.yml               - The CI/CD pipeline configuration
 ├── functions.sh                 - Bash helper functions, used by the pipeline
@@ -40,7 +41,7 @@ To update the site, make changes to content in _this_ repo.  When you're happy w
 
 ## GCP Project information
 
-The site is hosted within the [pit-shared-portal](https://console.cloud.google.com/home/dashboard?project=pit-shared-portal&folder=&orgonly=true) project in GCP.
+The site is hosted within the [lz-demo-docs](https://console.cloud.google.com/home/dashboard?project=lz-demo-docs&folder=&orgonly=true) project in GCP.
 
 ## Pipeline
 
@@ -80,7 +81,7 @@ On your machine you will need:
 
 ### Steps
 
-- Clone pit-cloud-team-portal to your machine.
+- Clone lz-demo-docs to your machine.
 - Run the Docker compose, which will build and run the Hugo image from the local.Dockerfile: \
   `docker compose -f ./local.docker-compose.yml up`
 - You will see Hugo start up, and the console will show the localhost URL for your site.

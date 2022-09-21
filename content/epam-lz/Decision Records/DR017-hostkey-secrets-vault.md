@@ -50,7 +50,7 @@ hostkey, containing the md5sum of the hostkey plaintext, which Ansible can quick
 
 [Ansible code](https://wtr-wscm-sourcerepo.epam.com/projects/AAN/repos/gcp-ssh/browse/roles/gcp-ssh/tasks/main.yml?until=2c3b86ab18217eb2e7c2b6c6eeb9c7961e45e25a&untilPath=roles%2Fgcp-ssh%2Ftasks%2Fmain.yml)
 
-[Terraform code](https://gitlab.com/Lz-demo-docs/pit_platform/pit-iaas/pit-iaas-landscape/blob/master/terraform/ansible.tf)
+[Terraform code](https://gitlab.com/Lz-demo-docs/pit_platform/lz-iaas/lz-iaas-landscape/blob/master/terraform/ansible.tf)
 
 ---
 
