@@ -5,7 +5,8 @@ baseURL: "https://demo-lz-docs-dot-lz-shared-portal.appspot.com"
 title: "LZ-Demo Docs"
 
 # Not advised to change these unless you know what you're doing!
-publishDir: "../app/www"
+# publishDir: "../app/www"
+publishDir: "../public"
 contentDir: "../content"
 languageCode: "en-gb"
 enableEmoji: true 
