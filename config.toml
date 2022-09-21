@@ -1,4 +1,4 @@
-baseurl = "https://darren-lester-epam.github.io/demo-lz-docs"
+baseurl = "https://derailed-dash.github.io/demo-lz-docs"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
