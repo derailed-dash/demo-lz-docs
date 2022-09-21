@@ -19,7 +19,7 @@ outputs:
   - "JSON"
 
 # Copy of https://github.com/matcornic/hugo-theme-learn, with tweaks (branding)
-theme: "epam-docs"
+theme: "Learn"
 
 # Site parameters
 # See: https://learn.netlify.com/en/basics/configuration/
