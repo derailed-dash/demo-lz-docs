@@ -1,0 +1,44 @@
+# Appspot default URL is VERSION-dot-SERVICE-dot-PROJECT_ID.REGION_ID.r.appspot.com
+# We can shorten https://<svc>-dot-<prj>.nw.r.appspot.com/ to https://<svc>-dot-<prj>.appspot.com/
+# baseURL is not used when running locally on localhost
+baseURL: "https://partnership-cloud-portal-dot-pit-shared-portal.appspot.com"
+title: "Partnership Cloud Portal"
+
+# Not advised to change these unless you know what you're doing!
+publishDir: "../app/www"
+contentDir: "../content"
+languageCode: "en-gb"
+enableEmoji: true 
+enableGitInfo: true
+
+# config enables search
+outputs:
+  home:
+  - "HTML"
+  - "RSS"
+  - "JSON"
+
+# Copy of https://github.com/matcornic/hugo-theme-learn, with tweaks (branding)
+theme: "epam-docs"
+
+# Site parameters
+# See: https://learn.netlify.com/en/basics/configuration/
+params:
+  editURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/tree/master/content/"
+  commitURL: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/onboarding/commit/"
+  author: "Cloud Centre of Excellence"
+  description: "Documentation for the EPAM Cloud Platform"
+  showVisitedLinks: true
+  disableSearch: false
+  # Javascript and CSS cache are automatically busted when new version of site is generated. 
+  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
+  disableAssetsBusting: false
+  # Order sections in menu by "weight" or "title". Default to "weight"
+  ordersectionsby: "weight"
+  styleCookie: "partnership-cloud-portal-dot-pit-shared-portal.appspot.com"
+  
+menu:
+  shortcuts:
+  - name: "<i class='fab fa-gitlab'></i> Git Repo"
+    url: "https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/pit-cloud-team-portal/"
+    weight: 99

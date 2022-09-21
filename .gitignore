@@ -1,1 +1,10 @@
+debug.log
+.vscode/settings.json
+app/www/
+src/.hugo_build.lock
+scratch/
 public/
+.hugo_build.lock
+themes/ananke
+go.mod
+go.sum

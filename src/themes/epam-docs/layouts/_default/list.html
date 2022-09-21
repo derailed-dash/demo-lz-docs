@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+{{ .Content }}
+
+<footer class=" footline" >
+	<hr />
+	{{ if .GitInfo }}
+		<p>
+			<i class='fas fa-code-branch'></i>
+			{{with .GitInfo.AuthorDate}}{{ .Format "02/01/2006" }}{{end}}
+			<a href="mailto:{{ .GitInfo.AuthorEmail }}"> {{ .GitInfo.AuthorName }}</a>,
+			<a href="{{ .Site.Params.commitURL }}{{ .GitInfo.Hash }}"> {{ .GitInfo.AbbreviatedHash}}: {{ .GitInfo.Subject}}</a>
+		</p>
+	{{ end }}
+</footer>
+
+{{ partial "footer.html" . }}

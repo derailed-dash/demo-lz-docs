@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: local.Dockerfile
+    image: hugo-engine:0.1
+    # Launch Hugo server, and watch for content changes
+    command: server --buildDrafts --watch --poll 1s --source src/
+    volumes:
+      - ".:/src"
+    ports:
+      - "1313:1313"
