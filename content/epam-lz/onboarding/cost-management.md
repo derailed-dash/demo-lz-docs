@@ -85,7 +85,7 @@ When deploying resources in your tenancy using the _project factory_ and _IaC_, 
 
 |Label Name|Description|Possible Values|
 |----------|-----------|---------------|
-|epam_platform|Which top level platform is in use|LZiiB / EDP / PDP|
+|epam_platform|Which top level platform is in use|LZiiB / Other|
 |epam_tenant|Your tenancy|Any|
 |epam_service|Project or service|Any|
 |responsible|EPAM Cost Centre|Any|
