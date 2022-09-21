@@ -41,5 +41,5 @@ params:
 menu:
   shortcuts:
   - name: "<i class='fab fa-gitlab'></i> Git Repo"
-    url: "https://gitlab.com/demo-lz-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/"
+    url: "https://gitlab.com/demo-lz-docs/lz-cloud-team-portal/"
     weight: 99
