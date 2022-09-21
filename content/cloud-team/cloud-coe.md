@@ -17,7 +17,6 @@ Note: this CoE doesn't yet exist! Our proposal is that it will look something li
 |Security Architecture|Responsible for strategic security capabilities, technology choices and secure-by-design patterns. Ensure that we have appropriate reusable security patterns that support cloud-hosted workloads.|
 |Information Security: Security Operations|Responsible for security monitoring and security incident response.|
 |Information Security: Secure-by-Design|Create the definition of both platform and tenant security requirements, as well as assurance that our solutions meet those requirements.|
-|EDP|Responsible for EDP; alignment between LZiiB and EDP platforms.|
 
 ## Contact Us
 
