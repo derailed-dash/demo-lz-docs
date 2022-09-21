@@ -47,8 +47,8 @@ The Cloud Platform Team will not provide ongoing management, maintenance, patchi
 |Provisioning and management of tenant-specific resources in a tenant project|Tenant|Unrestricted in sandbox; using IaC run by the service account in other environments|
 |Provisioning and management of additional service accounts in a tenant project|Tenant|Unrestricted in sandbox; using IaC run by the service account in other environments|
 |System logging from tenant instances|Tenant|Accomplished out-of-the-box through automatic deployment of Ops Agent using Terraform modules|
-|Provisioning of monitoring and performance dashboards at ECP infrastructure scope|Cloud Platform Team|The Cloud Platform Team will maintain monitoring, dashboards and alerting for all shared platform resourcs, including any resources deployed to the _Hub_ VPC. Furthermore, the Cloud Platform Team is responsible for monitoring any resources deployed by the _Tenant Factory_ itself.|
-|Monitoring and response of ECP-scoped logging and alerting|Cloud Platform Team + Sec Ops|BAU maintenance|
+|Provisioning of monitoring and performance dashboards at LZiiB infrastructure scope|Cloud Platform Team|The Cloud Platform Team will maintain monitoring, dashboards and alerting for all shared platform resourcs, including any resources deployed to the _Hub_ VPC. Furthermore, the Cloud Platform Team is responsible for monitoring any resources deployed by the _Tenant Factory_ itself.|
+|Monitoring and response of LZiiB-scoped logging and alerting|Cloud Platform Team + Sec Ops|BAU maintenance|
 |Provisioning of monitoring and performance dashboards at tenant scope|Tenant|The Tenant Factory will establish some vanilla monitoring dashboard capability for the tenant. It will be up to the tenant to add to and customise this, based on the resources they have deployed. In short, the tenant is responsible for any resources they have deployed themselves.|
 |Monitoring and response of tenant-scoped logging and alerting|Tenant|The tenant should establish their monitoring and response requirements and processes, supported through Service Introduction.|
 |Application unit and functional testing|Tenant|-|

@@ -25,7 +25,7 @@ menuTitle: "TP001: Cloud DR"
 
 ### Context
 
-Within the ECP environment, it is expected that your service's availability requirements are generally met through the use of **high availability** patterns, such as:
+Within the LZiiB environment, it is expected that your service's availability requirements are generally met through the use of **high availability** patterns, such as:
 
 - Using regional (i.e. multi-zone) resources, rather than zonal (where possible).
   - Resources that can be deployed regionally include (for example):  regional managed instance groups, regional load balancers, regional persistent disks, regional external IP addresses, Google Kubernetes Engine (GKE), Cloud Storage, Cloud Datastore, etc.
@@ -40,7 +40,7 @@ Consequently, **where our applications are sufficiently critical (as driven by R
 ### Solution
 
 {{% notice info %}}
-Our preferred approach in ECP is to execute DR using **infrastructure-on-demand**, coupled with automation through infrastructure-as-code.
+Our preferred approach in LZiiB is to execute DR using **infrastructure-on-demand**, coupled with automation through infrastructure-as-code.
 {{% /notice %}}
 
 ![Cloud DR Pattern](/images/dr-pattern.png)
@@ -50,7 +50,7 @@ Key tenets of this approach:
 - Your solution will have a _primary production_ environment, hosted in our London region. This region has resilient private connectivity to our data centres through interconnects.
 - Your solution will have a _standby_ environment, hosted in our DR region. This region also has resilient private connectivity to our data centres through interconnects. 
 - Your _primary production_ environment contains a full stack of your required infrastructure and services. 
-  - This stack will have been created using _Terraform_ IaC, and deployed using the ECP build pipeline, through your service account.
+  - This stack will have been created using _Terraform_ IaC, and deployed using the LZiiB build pipeline, through your service account.
   - Furthermore, in the _normal_ (happy day) scenario, all traffic (e.g. user / client requests) is directed to this environment.
 - Your _standby_ environment will typically have very little infrastructure deployed. (Exceptions to be covered later.)
 - **In the event of a regional disaster:**
@@ -104,11 +104,11 @@ Key tenets of this pattern:
   - Thus, the active/standby model is actually a very cost-effective way to leverage our on-premises infrastructure, and to continuously ensure good utilisation of our assets.
 - Building full environments on-premises is far more time consuming and far less automated than in the cloud. Consequently, on-demand infrastructure provisioning is not able to meet the RTOs of our most critical systems, for on-premises systems.
 
-**Rationale for avoiding this pattern in ECP:**
+**Rationale for avoiding this pattern in LZiiB:**
 
 - A key difference between our on-premises infrastructure and our cloud platform is that in the latter, we only pay for what we use.
 - Furthermore, in the cloud (unlike our on-premises infrastructure) there is no value - and no cost-effective ability - to share non-production and DR environments on the same physical hardware.
-- Consequently, our preferred approach in ECP is to only run environments (and thus pay for them) when needed.
+- Consequently, our preferred approach in LZiiB is to only run environments (and thus pay for them) when needed.
 - And finally: our automated full stack provisioning in cloud is _much_ faster than what we can achieve on-premises.
 
 ### Implications

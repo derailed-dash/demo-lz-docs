@@ -25,7 +25,7 @@ There are many product on GCP, and a plethora of pricing models.  Google documen
 
 Google offer a [pricing calculator](https://cloud.google.com/products/calculator/) that can be used to **estimate costs** for a wide variety of products.
 
-It is advised that any prospective ECP tenant works with a cloud architect and the Cloud Platform Team, when performing estimates.
+It is advised that any prospective LZiiB tenant works with a cloud architect and the Cloud Platform Team, when performing estimates.
 
 ### Cost Control
 
@@ -46,14 +46,14 @@ Here are some general tips for keeping costs under control, when using Google Cl
 
 ## Billing Overview
 
-All deployed Google Cloud resources are attributed to a single project. Consequently, **project costs are accumulated at the project level**. All these projects are ultimately associated with a **billing account** that is the responsibility of the ECP Service Owner.
+All deployed Google Cloud resources are attributed to a single project. Consequently, **project costs are accumulated at the project level**. All these projects are ultimately associated with a **billing account** that is the responsibility of the LZiiB Service Owner.
 
 The day-to-day management, analysis and reporting of our billing account is managed by **AppsBroker**, who EPAM have contracted with to provide Financial Operations expertise in GCP. 
 
 ### Cost Visibility
 
 - AppsBroker generate monthly billing reports, which are sent to all project owners. Members of your tenant `admin` group will have visibility of these reports.
-- All ECP projects will have associated **budgets**. 
+- All LZiiB projects will have associated **budgets**. 
   - Budgets are set at project level, and define monthly spend threshold.  
   - Initial budgets will be agreed when your tenancy is established.  
   - Budget alarms will be set automatically, resulting in email notifications to tenants, when budget thresholds - 50%, 80% and 100%, by default - are exceeded. 
@@ -68,7 +68,7 @@ A list of budget alert receivers for a project will be gathered as part of the o
 ### How You Pay
 
 {{% notice warning %}}
-TODO: Cloud CoE to agree model of how a tenant pays for use of ECP.
+TODO: Cloud CoE to agree model of how a tenant pays for use of LZiiB.
 {{% /notice %}}
 
 ## Labelling
@@ -85,7 +85,7 @@ When deploying resources in your tenancy using the _project factory_ and _IaC_, 
 
 |Label Name|Description|Possible Values|
 |----------|-----------|---------------|
-|epam_platform|Which top level platform is in use|ECP / EDP / PDP|
+|epam_platform|Which top level platform is in use|LZiiB / EDP / PDP|
 |epam_tenant|Your tenancy|Any|
 |epam_service|Project or service|Any|
 |responsible|EPAM Cost Centre|Any|

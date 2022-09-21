@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-Details about some of the tenants that run on ECP.  Including the shared tenancy project, PDP, Customer Registry, and others.
+Details about some of the tenants that run on LZiiB.  Including the shared tenancy project, PDP, Customer Registry, and others.
 
 {{<children>}}

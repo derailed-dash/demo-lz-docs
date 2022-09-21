@@ -6,13 +6,13 @@ weight: 5
 
 ## Page Contents
 
-- [So You Want To Host a New Application on ECP?](#so-you-want-to-host-a-new-application-on-ECP)
+- [So You Want To Host a New Application on LZiiB?](#so-you-want-to-host-a-new-application-on-LZiiB)
 - [Onboarding Steps](#onboarding-steps)
 - [How to Raise a Tenancy Request](#how-to-raise-a-tenancy-request)
 
-## So You Want To Host a New Application on ECP?
+## So You Want To Host a New Application on LZiiB?
 
-Assuming you have validated that ECP is the [right platform](/cloud-first/hosting/) for your new solution, the first thing you will need to do is establish a **new tenancy**.
+Assuming you have validated that LZiiB is the [right platform](/cloud-first/hosting/) for your new solution, the first thing you will need to do is establish a **new tenancy**.
 
 {{% notice info %}}
 You will be the **`tenant`**. I.e. an indendent _consumer_ of the platform.
@@ -21,7 +21,7 @@ The tenant could be an individual, but is more likely to be a team that is respo
 
 As a tenant:
 
-- The Cloud Platform Team will provide you with a `Prod` folder, a `Non-Prod` folder, and a `Sandbox` folder, as illustrated in the [resource hierarchy](/ECP/design-overview#organisation-resource-hierarchy).
+- The Cloud Platform Team will provide you with a `Prod` folder, a `Non-Prod` folder, and a `Sandbox` folder, as illustrated in the [resource hierarchy](/LZiiB/design-overview#organisation-resource-hierarchy).
 - You will be provided with projects in these folders:
   - Within your sandbox projects, you will have relatively unrestricted ability to deploy resources, in any manner you decide.
   - Within your non-prod (flex) and prod projects, deployment of resources will only be possible using a dedicated service account, which will run your own Infrastrucutre-as-Code (IaC), in the form of Terraform configurations.  You will generally not be able to deploy resources in these environments using the Google Cloud Console.
@@ -30,8 +30,8 @@ As a tenant:
 
 {{<mermaid align="center">}}
 graph TB
-    Candidate([Candidate Application for ECP]) --> TenantReq[Establish tenant project team]
-    TenantReq -- Tenancy Request --> Tenant-YAML["Tenant YAML deployed<br/>by Cloud Platform Team"] --> Tenant[fa:fa-sitemap Tenancy Created in ECP]
+    Candidate([Candidate Application for LZiiB]) --> TenantReq[Establish tenant project team]
+    TenantReq -- Tenancy Request --> Tenant-YAML["Tenant YAML deployed<br/>by Cloud Platform Team"] --> Tenant[fa:fa-sitemap Tenancy Created in LZiiB]
     Tenant --> Support["Agree Tenant<br/> Support Model"]
     Tenant -.- Groups["Groups<br/> Created"]
     Tenant -.- GitLab["GitLab Project<br/> and Access"]

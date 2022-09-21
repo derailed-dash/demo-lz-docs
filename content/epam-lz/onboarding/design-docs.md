@@ -47,7 +47,7 @@ It will include such things as:
 
 ### Differences When Operating in the Cloud
 
-When operating in the ECP environment, it is recommended to keep LLD documentation to a minimum. Where possible, low level details should be self documenting in the infrastructure-as-code, e.g. in the form of yaml files and Terraform files which are checked-in to your tenant Git repo.
+When operating in the LZiiB environment, it is recommended to keep LLD documentation to a minimum. Where possible, low level details should be self documenting in the infrastructure-as-code, e.g. in the form of yaml files and Terraform files which are checked-in to your tenant Git repo.
 
 This is a useful agility benefit of working with cloud:
 

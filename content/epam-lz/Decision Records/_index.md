@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-Decision records relating to the ECP platform.  This includes various decisions made as part of ECP v1 and ECP Evolution.
+Decision records relating to the LZiiB platform.  This includes various decisions made as part of LZiiB v1 and LZiiB Evolution.
 
 {{<children>}}

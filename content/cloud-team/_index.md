@@ -8,3 +8,5 @@ chapter: true
 # {{< param title >}}
 
 Who we are, what we do, and how to reach us.
+
+{{% children %}}

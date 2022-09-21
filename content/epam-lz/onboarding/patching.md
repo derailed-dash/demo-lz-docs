@@ -66,7 +66,7 @@ This process is automatic through a CI/CD pipeline, resulting in our images bein
 
 #### Deploying Instances
 
-We are now able to build GCE instances (VMs) from our image.  On ECP, our security policy will only permit the use of _Shielded VM images_.  I.e. Google images that are already in the _Shielded_ category, or EPAM CIS-compliant gold images.
+We are now able to build GCE instances (VMs) from our image.  On LZiiB, our security policy will only permit the use of _Shielded VM images_.  I.e. Google images that are already in the _Shielded_ category, or EPAM CIS-compliant gold images.
 
 {{<mermaid align="left">}}
 graph LR

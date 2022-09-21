@@ -1,20 +1,20 @@
 ---
-title: "ECP Overview"
-menuTitle: "ECP Overview"
+title: "LZiiB Overview"
+menuTitle: "LZiiB Overview"
 weight: 5
 ---
 
 ## Page Contents
 
-- [What is ECP?](#what-is-ECP)
-- [Motivation for ECP](#motivation-for-ECP)
+- [What is LZiiB?](#what-is-LZiiB)
+- [Motivation for LZiiB](#motivation-for-LZiiB)
 - [Useful Links](#useful-links)
 
-## What is ECP
+## What is LZiiB
 
-ECP is our strategic enterprise **EPAM Cloud Platform**.  It is a GCP-based platform, intended for the hosting of off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both. (ECP has previously been known as other names, including _PSEG_, and the _LZ-Demo Strategic GCP Hybrid Cloud_.)
+LZiiB is our reusable **EPAM Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
 
-## Motivation for ECP
+## Motivation for LZiiB
 
 Google Cloud Platform offers hundreds of services.  There are a staggering number of permutations as to how these services can be deployed. Uncontrolled deployment of such services leads to:  
 
@@ -28,7 +28,7 @@ Google Cloud Platform offers hundreds of services.  There are a staggering numbe
 - A lack of visibility of what has been deployed (leading to further “cloud sprawl” and shadow IT).
 - A lack of common access control.
 
-ECP wraps these standard Google Cloud services with:
+LZiiB wraps these standard Google Cloud services with:
 
 - A **landing zone** and **(Google) project factory**, providing a repeatable and consistent way to deploy cloud services, using standardised tools, monitoring, preferred patterns, and repeatable infrastructure-as-code.
 - Default **security policies**, to meet the enterprise needs of EPAM.
@@ -43,5 +43,5 @@ ECP wraps these standard Google Cloud services with:
 
 ## Useful Links
 
-- [ECP Overview](https://docs.google.com/presentation/d/1HOUBPD_6JQYMeknhn6aEf_4BhGBF8qNTw5lMlckiA8I)
-- [ECP Evolution Project - Overview and Familiarisation](https://docs.google.com/presentation/d/1XZgoScNIjp_BL_j5Ku_1M0lerC_J8arsMLpNFeggPrg)
+- [LZiiB Overview](https://docs.google.com/presentation/d/1HOUBPD_6JQYMeknhn6aEf_4BhGBF8qNTw5lMlckiA8I)
+- [LZiiB Evolution Project - Overview and Familiarisation](https://docs.google.com/presentation/d/1XZgoScNIjp_BL_j5Ku_1M0lerC_J8arsMLpNFeggPrg)

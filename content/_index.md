@@ -6,13 +6,15 @@ weight: 1
 
 # {{< param title >}}
 
-## Welcome to the LZ-Demo Cloud Portal
+## Welcome to LZ-Demo-Docs
 
-Here you will find documentation and guidance related to:
+Here you will find a set of _demonstration documentation_, that could conceivably be included in a _Landing Zone in-a-box_ package. This would give clients a head start in documenting their LZ implementation.
 
-- The LZ-Demo's use of public cloud
-- The EPAM Cloud Platform (ECP)
+These demo docs include:
+
+- A sample client's use of a GCP landing zone
 - Cloud principles
-- Design
-- How to get started
+- Overview of the LZ
+- Design overview, resource hierarchy and key design decisions
+- How to get started, onboarding, and responsibilities of the tenant
 - How to get help

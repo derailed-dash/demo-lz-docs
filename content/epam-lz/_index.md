@@ -1,12 +1,12 @@
 ---
-title: "EPAM Cloud Platform (ECP)"
-menuTitle: "EPAM Cloud Platform"
+title: "EPAM LZ-in-a-Box (LZiiB)"
+menuTitle: "EPAM LZ-in-a-Box"
 weight: 10
 chapter: true
 ---
 
 # {{< param title >}}
 
-What is ECP, why should you use it, and where do you start?
+What is LZiiB, why should you use it, and where do you start?
 
 {{<children>}}

@@ -20,7 +20,7 @@ GitHub is owned by Microsoft ;-)
 
 ### Access
 
-Access to GitLab is currently on a self register basis. So long as you have a netdom account you are able to visit (currently) [gitlab.com](https://gitlab.com/Lz-demo-docs/pit_platform/) and register by yourself. Once registered ensure you set-up Two Factor Authentication for you login. The individual user (you) is responsible for ensuring their account is protected by two factor authentication and the GitLab admins audit this regularly. Failure to set this up in a timely manner is a breach of policy and may lead to account de-activation.
+Access to GitLab is currently on a self register basis. So long as you have a netdom account you are able to visit (currently) [gitlab.com](https://gitlab.com/demo-lz-docs/pit_platform/) and register by yourself. Once registered ensure you set-up Two Factor Authentication for you login. The individual user (you) is responsible for ensuring their account is protected by two factor authentication and the GitLab admins audit this regularly. Failure to set this up in a timely manner is a breach of policy and may lead to account de-activation.
 
 {{% notice warning %}}
 **Disclaimer:** the cloud team are not GitLab admins. The above serves as a guide based on our experiences when first getting started. For GitLab support and questions join the comm-gitlab channel on slack where you can talk to GitLab admins and the JL community directly. See the comm-gitlab channel for information on what will change when the migration to gitlab.com happens.
@@ -46,7 +46,7 @@ cross-charging back to us!)
 - The PDP / AW systems have GKE clusters for each system / environment combination
 which run the pipelines for those systems.  The available AW/PDP runners are [documented here](https://docs.google.com/spreadsheets/d/1haqwO_7p2RGjL6lUz3XjeQk0_pkqnPl-hAloDouq47g/edit#gid=2037107266).
 
-- The IaaS system has a GCE instance providing its runner.  It is [documented here](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/lz-shared-gitlab/-/tree/master).
+- The IaaS system has a GCE instance providing its runner.  It is [documented here](https://gitlab.com/demo-lz-docs/pit_platform/pit_platform_cloud/lz-shared-gitlab/-/tree/master).
 
 - The PIT Platform Cloud team have a pair of GKE clusters, lz-prd and lz-npd,
 which contain the runners for: the APAS (legacy PDP) system; the terraform-gcloud

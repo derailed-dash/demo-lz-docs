@@ -1,5 +1,5 @@
 ---
-title: "ECP Design Overview"
+title: "LZiiB Design Overview"
 menuTitle: "Design Overview"
 weight: 10
 ---
@@ -19,17 +19,17 @@ weight: 10
 
 ## Design Overview
 
-![ECP Architecture Overview](/images/ECP_architecture_overview.png)
+![LZiiB Architecture Overview](/images/LZiiB_architecture_overview.png)
 
 ## Organisation Resource Hierarchy
 
-The ECP organisation hierarchy looks like this:
+The LZiiB organisation hierarchy looks like this:
 
 {{<mermaid align="left">}}
 graph LR
-    ORG[fa:fa-sitemap epam.com] ---> MNG[fa:fa-folder org-mng] & ECP[fa:fa-folder ECP]
+    ORG[fa:fa-sitemap some-org.com] ---> MNG[fa:fa-folder org-mng] & LZiiB[fa:fa-folder LZiiB]
     ORG --> EDP[fa:fa-folder EDP]
-    ECP --> PRD[fa:fa-folder Prod] & FLEX[fa:fa-folder Flex] & SBOX[fa:fa-folder SandBox]
+    LZiiB --> PRD[fa:fa-folder Prod] & FLEX[fa:fa-folder Flex] & SBOX[fa:fa-folder SandBox]
     PRD --> PRD-PLT[fa:fa-folder Platform] & PRD-A[fa:fa-folder Tenant A] & PRD-B[fa:fa-folder Tenant B]
     PRD-PLT --> PRD-PLT-NET[fa:fa-folder Network] & PRD-SHARED-GKE[fa:fa-folder Shared GKE]
     FLEX --> NPD-PLT[fa:fa-folder Platform] & NPD-A[fa:fa-folder Tenant A] & NPD-B[fa:fa-folder Tenant B]
@@ -50,7 +50,7 @@ graph LR
     classDef lightblue fill:#a3cded,stroke:#555;
     classDef green fill:#276551,color:white,stroke:#555,stroke-width:2px;
     class ORG orange
-    class MNG,ECP,EDP darkblue
+    class MNG,LZiiB,EDP darkblue
     class PRD,FLEX,SBOX blue
     class PRD-PLT,PRD-A,PRD-B,SBOX-A,SBOX-X,PRD-PLT-NET,PRD-SHARED-GKE lightblue
     class NPD-PLT,NPD-A,NPD-B,NPD-PLT-NET,NPD-SHARED-GKE lightblue
@@ -75,10 +75,10 @@ Notes on this hierarchy:
 
 ## Identity and Access Management
 
-- ECP resources may only be managed by Google Workspace or Google Cloud Identities, which are tied to the `epam.com` domain.
+- LZiiB resources may only be managed by Google Workspace or Google Cloud Identities, which are tied to the `some-org.com` domain.
 - Users are mastered on-premise in Active Directory, and synchronised from AD to Google Cloud using one-way Google Cloud Directory Sync (GCDS).
 - Identities may be users, groups, the entire domain, or service accounts.
-  - Typically, access to resources is not granted to individual accounts, but to groups. Groups in ECP will be named using this **naming convention**: \
+  - Typically, access to resources is not granted to individual accounts, but to groups. Groups in LZiiB will be named using this **naming convention**: \
   `_gcp-{division}-{platform}-{tier}-{tenant}-{functional_role}`
   - **User identities** are **authenticated** to Google Cloud using **PingIdentity SSO** with multi-factor authentication.
   - **Service accounts** are associated with a given application.  They allow applications and certain GCP services (e.g. GCE instances) to access other GCP services and APIs. Organisational security policies will be enforced to restrict use of security accounts, and to - for example - prevent creation and sharing of service account keys.
@@ -87,7 +87,7 @@ Notes on this hierarchy:
 
 ## Networking
 
-ECP uses a **hub-and-spoke** network architecture:
+LZiiB uses a **hub-and-spoke** network architecture:
 
 - **A _common VPC_ network acts as the _hub_**, and hosts centralised networking and security resources. This includes private IP connectivity, via the SLA-backed, high-bandwidth / low-latency _Interconnect_, to the EPAM on-premises network.
 - **Tenant projects will have their own _spoke_ VPC network.** Thus, tenants have full automonmy and control over resources deployed within their own VPC.
@@ -95,15 +95,15 @@ ECP uses a **hub-and-spoke** network architecture:
   - Obtain private connectivity to the on-premises network (if appropriate).
   - By funnelled through centralised security tooling when accessing other networks (if appropriate).
 - There is expected to be a _shared tenant VPC_ to host, for example, a shared GKE cluster, for those Tenant's who have no specific network requirements. 
-- DNS peering will allow Google Cloud resources to perform DNS resolution against on-premises infrastructure, e.g. such that we can resolve hostnames in the `epam.com` domain. 
+- DNS peering will allow Google Cloud resources to perform DNS resolution against on-premises infrastructure, e.g. such that we can resolve hostnames in the `some-org.com` domain. 
 
 {{< expand Expand-title="A note on terminology" style="bold" >}}
 
-The previous iteration of ECP (v1) was built around a **_Shared VPC_** which provided Subnets and Interconnect services for Tenant _service Projects_.
+The previous iteration of LZiiB (v1) was built around a **_Shared VPC_** which provided Subnets and Interconnect services for Tenant _service Projects_.
 
 The **Shared VPC** name has [an explicit meaning with regards GCP](https://cloud.google.com/vpc/docs/shared-vpc), so for the avoidance of doubt:
 
-- ECPv2's central Hub project will be referred to as the _common VPC_, and will provide (via VPC-peering) Interconnect connectivity.
+- LZiiBv2's central Hub project will be referred to as the _common VPC_, and will provide (via VPC-peering) Interconnect connectivity.
 - Tenant's will receive their _tenant VPC_ as part of the Tenant Factory / Onboarding process.
 - The _shared tenant VPC_ will be used for tenants with no specific network requirements.
 
@@ -124,9 +124,9 @@ The Hub-and-Spoke design exists in Production, and is replicated in Non-Producti
 **Zones** are effectively data centre campuses, with each zone separated by a few km at most. A zone can be considered a single independent failure domain within a given region.
 {{% /notice %}}
 
-High-availability is achieved by deploying resources across more than one zone within a region. Consequently, production resources in ECP should generally be deployed using regional resources, rather than zonal, where possible.
+High-availability is achieved by deploying resources across more than one zone within a region. Consequently, production resources in LZiiB should generally be deployed using regional resources, rather than zonal, where possible.
 
-However, deployment across multiple zones within a single region is insufficient to safeguard against a major geographic disaster event.  For this reason, any application that requires diaster recovery capability will need to be deployable across two separate regions.  To support this requirement, ECP has connectivity to on-premises out of two separate regions:
+However, deployment across multiple zones within a single region is insufficient to safeguard against a major geographic disaster event.  For this reason, any application that requires diaster recovery capability will need to be deployable across two separate regions.  To support this requirement, LZiiB has connectivity to on-premises out of two separate regions:
 
 - Primary region: London (`europe-west2`)
 - Standby region: Netherlands (`europe-west4`)
@@ -141,7 +141,7 @@ Outbound connectivity from Google resources to the Internet is routed through EP
 Google Compute Engine (GCE) instances will only be given private IP addresses; they will **never be given external IP addresses**. Consequently, these instances are not directly reachable from any external network; this includes from the Internet.
 {{% /notice %}}
 
-Consequently, if external access is required to a ECP-hosted service, this **must be achieved via a load balancer**.  Routing inbound traffic through a load balancer means:
+Consequently, if external access is required to a LZiiB-hosted service, this **must be achieved via a load balancer**.  Routing inbound traffic through a load balancer means:
 
 - The load balancer acts as a reverse proxy; external clients only see the public IP address of the load balancer.
 - Internal resources do not need external IP addresses.
@@ -150,7 +150,7 @@ Consequently, if external access is required to a ECP-hosted service, this **mus
 
 ### Access to Google APIs and Services
 
-Google Private Access is enabled on all ECP VPC networks.  This allows instances with no external IP address to connect to Google APIs and services, such as BigQuery, Container Registry, Cloud Datastore, Cloud Storage, and Cloud Pub/Sub.
+Google Private Access is enabled on all LZiiB VPC networks.  This allows instances with no external IP address to connect to Google APIs and services, such as BigQuery, Container Registry, Cloud Datastore, Cloud Storage, and Cloud Pub/Sub.
 
 ### GKE Control Plane Connectivity
 
@@ -192,8 +192,4 @@ Connectivity between GKE cluster "worker" nodes and the cluster's control plane 
   - Reporting of VPC service controls.
   - Compliance management.
   - Actionable security recommendations.
-  
-## Useful Links
 
-- [ECP v1 High Level Design (HLD)](https://docs.google.com/document/d/1uUTn3oCY4JxPbjpVg0vB6iPhoWoiYa8ZeMbtpmlHHsM/edit)
-- [ECP v2 Technical Design Document (TDD)](https://docs.google.com/document/d/1ARJV994vCIv20Oc6QTC6vDxA3pdNHRgFjxjggPwZYSU/edit?hl=en-GB&forcehl=1)

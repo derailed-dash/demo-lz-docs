@@ -31,7 +31,7 @@ it is not a "write-once-deploy-anywhere" solution.
 
 ## Running Terraform
 
-The usual way of running Terraform in EPAM is within a GitLab pipeline, defined in your repo's [`.gitlab-ci.yml`](https://gitlab.com/Lz-demo-docs/pit_platform/demo-data-platform/pdp-dsde/blob/master/.gitlab-ci.yml) file.
+The usual way of running Terraform in EPAM is within a GitLab pipeline, defined in your repo's [`.gitlab-ci.yml`](https://gitlab.com/demo-lz-docs/pit_platform/demo-data-platform/pdp-dsde/blob/master/.gitlab-ci.yml) file.
 
 The best way to get started is to copy a similar repo's file, but here are some pointers...
 
@@ -67,12 +67,12 @@ The PIT Cloud Team maintain a repository of useful terraform modules for doing c
 projects, storage buckets, service accounts, granting API / IAM access etc.  In addition, large projects will
 wish to write their own module repos to extend these.
 
-See the [PIT Cloud Team modules repo](https://gitlab.com/Lz-demo-docs/pit_platform/pit_platform_cloud/terraform/modules).
+See the [PIT Cloud Team modules repo](https://gitlab.com/demo-lz-docs/pit_platform/pit_platform_cloud/terraform/modules).
 
 All EPAM users have read access to all EPAM repos.  However to gain access to module code outside of your repo,
 you will need to pass in a gitlab private key as an project variable, then add this to ssh-agent as part of
 your pipeline code (see any PIT Cloud Team pipeline for
-[an example](https://gitlab.com/Lz-demo-docs/pit_platform/demo-data-platform/pdp-dsde/blob/master/.gitlab-ci.yml) )
+[an example](https://gitlab.com/demo-lz-docs/pit_platform/demo-data-platform/pdp-dsde/blob/master/.gitlab-ci.yml) )
 
 ## GCP credentials and GitLab Variables (KMS)
 
@@ -103,7 +103,7 @@ pushing to GitLab and running a fresh pipeline for each attempt.
 If your team plan to maintain their own local terraform installations and test code before pushing it to
 GitLab, it is recommended that you include copy-pasteable instructions in your repo's `README.md` file which
 include the location of the shared state bucket and variable file for the development environment.
-For [example](https://gitlab.com/Lz-demo-docs/pit_platform/demo-data-platform/pdp-dsde):
+For [example](https://gitlab.com/demo-lz-docs/pit_platform/demo-data-platform/pdp-dsde):
 
 ```bash
 terraform init -backend-config="bucket=pdpv-dsde-tf-state" terraform/
