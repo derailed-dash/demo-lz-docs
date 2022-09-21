@@ -9,4 +9,4 @@ chapter: true
 
 We have a principle of _Cloud-First_.  This means public cloud should be considered, ahead of other hosting options.
 
-{{<children>}}
+{{% children %}}
