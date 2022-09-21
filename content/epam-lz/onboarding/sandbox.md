@@ -41,7 +41,7 @@ You can view detailed billing information about your project in the [billing rep
 ## Requesting a Sandbox Project
 
 - A **tenant sandbox** is created automatically, by the _tenant factory_, upon creation of a tenancy in LZiiB.
-- For an **individual sandbox**, please raise a Non Catalogue Request in service now for **PIT Platform Cloud Support** with the following template and ensure relevant line manager approval is provided.
+- For an **individual sandbox**, please raise a Catalogue Request in ServiceNow with the following template and ensure relevant line manager approval is provided.
 
 ### Request Template
 
