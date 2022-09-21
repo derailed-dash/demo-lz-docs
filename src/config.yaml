@@ -1,8 +1,8 @@
 # Appspot default URL is VERSION-dot-SERVICE-dot-PROJECT_ID.REGION_ID.r.appspot.com
 # We can shorten https://<svc>-dot-<prj>.nw.r.appspot.com/ to https://<svc>-dot-<prj>.appspot.com/
 # baseURL is not used when running locally on localhost
-baseURL: "https://demo-lz-docs-cloud-portal-dot-lz-shared-portal.appspot.com"
-title: "LZ-Demo Cloud Portal"
+baseURL: "https://demo-lz-docs-dot-lz-shared-portal.appspot.com"
+title: "LZ-Demo Docs"
 
 # Not advised to change these unless you know what you're doing!
 publishDir: "../app/www"
@@ -24,10 +24,10 @@ theme: "Learn"
 # Site parameters
 # See: https://learn.netlify.com/en/basics/configuration/
 params:
-  editURL: "https://gitlab.com/demo-lz-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/tree/master/content/"
-  commitURL: "https://gitlab.com/demo-lz-docs/pit_platform/pit_platform_cloud/lz-cloud-team-portal/onboarding/commit/"
-  author: "Cloud Centre of Excellence"
-  description: "Documentation for the EPAM Cloud Platform"
+  editURL: "https://gitlab.com/demo-lz-docs/lz-cloud-team-portal/tree/master/content/"
+  commitURL: "https://gitlab.com/demo-lz-docs/lz-cloud-team-portal/onboarding/commit/"
+  author: "Darren Lester"
+  description: "Documentation for the EPAM LZ-in-a-Box Demo Docs"
   showVisitedLinks: true
   disableSearch: false
   # Javascript and CSS cache are automatically busted when new version of site is generated. 

@@ -2,7 +2,7 @@
 
 This is the documentation repo for Landing Zone Docs Demo.  Here you will find:
 
-- Content for the portal site itself
+- Content for the site itself
 - Instructions on how to modify the content
 - An overview of the CI/CD pipeline that builds the site
 
@@ -11,7 +11,7 @@ This is the documentation repo for Landing Zone Docs Demo.  Here you will find:
 ```
 .
 ├── app/                         - The template for the Google App Engine Python web applicaton
-├── content/                     - Where the portal content lives. THIS IS WHAT YOU UPDATE
+├── content/                     - Where the site content lives. THIS IS WHAT YOU UPDATE
 ├── src/                         - Hugo configuration and themes
 ├── themes/                      - In case we want to build using GitLab Hugo project
 ├── .github/workflows/pages.yml  - The GitHub Action CI/CD pipeline configuration
