@@ -1,0 +1,52 @@
+# Hugo runner for Gitlab that deploys to an AppEngine service
+
+stages:
+- build
+- deploy
+
+variables:
+  SITE: lz-site-name
+  GOOGLE_CREDENTIALS: $GOOGLE_CREDS
+  GCP_PROJECT_ID: gcp-project-id
+  GCP_APP_ENGINE_SERVICE: app-engine-svc-name
+
+build:
+  stage: build
+  image: registry.gitlab.com/pages/hugo:0.92.2
+  only:
+  - master
+  script:
+  - source functions.sh   
+  - console_msg "Building site ... ${SITE}"
+  - pushd "src/" >/dev/null
+  - mkdir -p ../app/www
+  - hugo -s .
+  - popd >/dev/null
+  - console_msg "Build complete" INFO true 
+  artifacts:
+    paths:
+    - "app/www/**"
+  tags:
+    - pit
+
+deploy:
+  stage: deploy
+  dependencies:
+  - build
+  image: registry.gitlab.com/pages/hugo:0.92.2
+  only:
+  - master
+  script:
+  - source functions.sh  
+  - pushd "app/" >/dev/null
+  - echo "${GOOGLE_CREDENTIALS}" | gcloud auth activate-service-account --key-file -
+  - trap "gcloud auth revoke --verbosity=error" EXIT
+  - console_msg "Deploying docs site ... ${SITE}" INFO true
+  - cat app-template.yaml | sed 's/${SITE}/'${SITE}'/g' > app.yaml
+  - gcloud app deploy --project ${GCP_PROJECT_ID} --quiet
+  - console_msg "Deployment complete" INFO true
+  - popd >/dev/null
+  - console_msg "Deleting old version"
+  - delete_old_app_engine_versions ${GCP_PROJECT_ID} ${GCP_APP_ENGINE_SERVICE}
+  tags:
+    - pit
