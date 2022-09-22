@@ -119,7 +119,8 @@ Key tenets of this pattern:
 
 ### Example Use Cases
 
-- Customer Registry.
+- App 1
+- App 2
 
 _Note that any existing implementations of the pattern may change over time._
 
