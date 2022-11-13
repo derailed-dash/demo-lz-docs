@@ -28,7 +28,7 @@ params:
   editURL: "https://gitlab.com/demo-lz-docs/lz-cloud-team-portal/tree/master/content/"
   commitURL: "https://gitlab.com/demo-lz-docs/lz-cloud-team-portal/onboarding/commit/"
   author: "Darren Lester"
-  description: "Documentation for the EPAM LZ-in-a-Box Demo Docs"
+  description: "Documentation for the LZ-in-a-Box Demo Docs"
   showVisitedLinks: true
   disableSearch: false
   # Javascript and CSS cache are automatically busted when new version of site is generated. 

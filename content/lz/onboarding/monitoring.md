@@ -7,29 +7,29 @@ weight: 15
 ## Page Contents
 
 - [Operational Monitoring and Logging](#operational-monitoring-and-logging)
-  - [Standard Tooling in LZiiB](#standard-tooling-in-ecp)
+  - [Standard Tooling in LZiaB](#standard-tooling-in-ecp)
   - [Cloud Platform Team Responsibilities](#cloud-platform-team-responsibilities)
   - [Tenant Responsibilities](#tenant-responsibilities)
 - [Security Information and Event Management](#security-information-and-event-management)
-  - [Standard Tooling in LZiiB](#standard-tooling-in-ecp-1)
+  - [Standard Tooling in LZiaB](#standard-tooling-in-ecp-1)
   - [Security Response](#security-response)
 
 ## Operational Monitoring and Logging
 
-### Standard Tooling in LZiiB
+### Standard Tooling in LZiaB
 
-Within LZiiB, our default approach to logging, monitoring and alerting is to use Google's **[Cloud Operations](https://cloud.google.com/stackdriver/docs)**. Cloud Operations (previously known as _Stack Driver_) is a cloud-native integrated platform that provides many capabilities.  Here are just some of these capabilities:
+Within LZiaB, our default approach to logging, monitoring and alerting is to use Google's **[Cloud Operations](https://cloud.google.com/stackdriver/docs)**. Cloud Operations (previously known as _Stack Driver_) is a cloud-native integrated platform that provides many capabilities.  Here are just some of these capabilities:
 
 |Capability|Overview|
 |----------|--------|
-|**Cloud Monitoring**|Monitoring, utilisation, visualisation, dashboards, health and uptime checks, SLIs, and alerting. Within LZiiB, ops agents are automatically deployed to instances by default, in order to enrich VM metrics that are sent to Cloud Monitoring.|
-|**Cloud Logging**|Ingests logs from various sources, including audit logs, network (VPC flow) logs, firewall logs, and other sources. Many GCP services have logging built-in, e.g. App Engine, GKE, Cloud Functions. For those that don’t, an agent is typically installed, e.g. GCE instances. Within LZiiB, ops agents are automatically deployed to instances by default, ensuring that standard OS system logs, and logs from commonly used third party applications (like Apache, Nginx, Tomcat) are automatically captured and sent to Cloud Logging. Logs can be filtered and exported, if required. Cloud Logging then provides viewing, aggregation, searching, filtering, and the ability to export and integrate.|
+|**Cloud Monitoring**|Monitoring, utilisation, visualisation, dashboards, health and uptime checks, SLIs, and alerting. Within LZiaB, ops agents are automatically deployed to instances by default, in order to enrich VM metrics that are sent to Cloud Monitoring.|
+|**Cloud Logging**|Ingests logs from various sources, including audit logs, network (VPC flow) logs, firewall logs, and other sources. Many GCP services have logging built-in, e.g. App Engine, GKE, Cloud Functions. For those that don’t, an agent is typically installed, e.g. GCE instances. Within LZiaB, ops agents are automatically deployed to instances by default, ensuring that standard OS system logs, and logs from commonly used third party applications (like Apache, Nginx, Tomcat) are automatically captured and sent to Cloud Logging. Logs can be filtered and exported, if required. Cloud Logging then provides viewing, aggregation, searching, filtering, and the ability to export and integrate.|
 |**Trace**|Distributed tracing system that collects latency data and displays data relating to latency and propagation of requests through an application, giving near real time performance insights and per-URL statistics.|
 |**Profiler**|Visualise and continuously analyse the continuous resource usage (e.g. CPU and memory), to identify bottlenecks and determine if any resources are using excessive resources.  Uses statistical sampling, so very little overhead.|
 
 ### Cloud Platform Team Responsibilities
 
-The Cloud Platform Team will monitor all LZiiB resources that are shared, including all resources deployed to the _Hub_ VPC.
+The Cloud Platform Team will monitor all LZiaB resources that are shared, including all resources deployed to the _Hub_ VPC.
 
 ### Tenant Responsibilities
 
@@ -67,9 +67,9 @@ It may be useful to look at other sample dashboards. See [here](https://github.c
 
 ## Security Information and Event Management
 
-### Standard Tooling in LZiiB
+### Standard Tooling in LZiaB
 
-LZiiB will leverage the Google [Security Command Centre (SCC) Premium](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview).
+LZiaB will leverage the Google [Security Command Centre (SCC) Premium](https://cloud.google.com/security-command-center/docs/concepts-security-command-center-overview).
 
 ![SCC Overview](/images/scc.png)
 

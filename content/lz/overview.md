@@ -1,20 +1,20 @@
 ---
-title: "LZiiB Overview"
-menuTitle: "LZiiB Overview"
+title: "LZiaB Overview"
+menuTitle: "LZiaB Overview"
 weight: 5
 ---
 
 ## Page Contents
 
-- [What is LZiiB?](#what-is-LZiiB)
-- [Motivation for LZiiB](#motivation-for-LZiiB)
+- [What is LZiaB?](#what-is-LZiaB)
+- [Motivation for LZiaB](#motivation-for-LZiaB)
 - [Useful Links](#useful-links)
 
-## What is LZiiB
+## What is LZiaB
 
-LZiiB is our reusable **EPAM Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
+LZiaB is our reusable **Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
 
-## Motivation for LZiiB
+## Motivation for LZiaB
 
 Google Cloud Platform offers hundreds of services.  There are a staggering number of permutations as to how these services can be deployed. Uncontrolled deployment of such services leads to:  
 
@@ -28,10 +28,10 @@ Google Cloud Platform offers hundreds of services.  There are a staggering numbe
 - A lack of visibility of what has been deployed (leading to further “cloud sprawl” and shadow IT).
 - A lack of common access control.
 
-LZiiB wraps these standard Google Cloud services with:
+LZiaB wraps these standard Google Cloud services with:
 
 - A **landing zone** and **(Google) project factory**, providing a repeatable and consistent way to deploy cloud services, using standardised tools, monitoring, preferred patterns, and repeatable infrastructure-as-code.
-- Default **security policies**, to meet the enterprise needs of EPAM.
+- Default **security policies**, to meet the enterprise needs of the organisation.
 - **Enforced use of automation**, to prevent configuration drift and inconsistency, and to ensure agility.
 - Private, SLA-backed high bandwidth, low latency **connectivity** to on-premises data centre networks, for use cases that need it.  (E.g. for routine high volume data transfer.) 
 - **Identity and access management** that is integrated with our existing on-prem master identity provider, Active Directory.
@@ -43,5 +43,5 @@ LZiiB wraps these standard Google Cloud services with:
 
 ## Useful Links
 
-- [LZiiB Overview](https://docs.google.com/presentation/d/1HOUBPD_6JQYMeknhn6aEf_4BhGBF8qNTw5lMlckiA8I)
-- [LZiiB Evolution Project - Overview and Familiarisation](https://docs.google.com/presentation/d/1XZgoScNIjp_BL_j5Ku_1M0lerC_J8arsMLpNFeggPrg)
+- [LZiaB Overview](https://docs.google.com/presentation/d/1HOUBPD_6JQYMeknhn6aEf_4BhGBF8qNTw5lMlckiA8I)
+- [LZiaB Evolution Project - Overview and Familiarisation](https://docs.google.com/presentation/d/1XZgoScNIjp_BL_j5Ku_1M0lerC_J8arsMLpNFeggPrg)

@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-Decision records relating to the LZiiB platform.  This includes various decisions made as part of LZiiB v1 and LZiiB Evolution.
+Decision records relating to the LZiaB platform.  This includes various decisions made as part of LZiaB v1 and LZiaB Evolution.
 
 {{<children>}}

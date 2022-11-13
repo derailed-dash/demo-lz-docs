@@ -18,9 +18,9 @@ weight: 10
 
 ## Tenant Factory Overview
 
-Following your [tenancy request](/LZiiB/onboarding/getting-started#how-to-raise-a-tenancy-request), you will be established in LZiiB as a new **tenant**.  This approaches allows you - as a tenant - to be responsible for deploying and managing your own resources within your Google projects. Thus increases your agility, and reduces dependency on the central Cloud Platform Team.
+Following your [tenancy request](/LZiaB/onboarding/getting-started#how-to-raise-a-tenancy-request), you will be established in LZiaB as a new **tenant**.  This approaches allows you - as a tenant - to be responsible for deploying and managing your own resources within your Google projects. Thus increases your agility, and reduces dependency on the central Cloud Platform Team.
 
-The automated **tenant factory** will generate a set of resources for you, in the LZiiB environment. This includes:
+The automated **tenant factory** will generate a set of resources for you, in the LZiaB environment. This includes:
 
 - Your **tenant folder** in the Google resource hiearchy.
 - Your **_Prod_, Non-Prod (_Flex_) and _Sandbox_ folders**.
@@ -62,7 +62,7 @@ graph LR
     classDef lightblue fill:#a3cded,stroke:#555;
     classDef green fill:#276551,color:white,stroke:#555,stroke-width:2px;
     class ORG orange
-    class MNG,LZiiB,EDP darkblue
+    class MNG,LZiaB,EDP darkblue
     class PRD,FLEX,SBOX blue
     class PRD-PLT,PRD-A,PRD-B,SBOX-A,SBOX-X,PRD-PLT-NET lightblue
     class NPD-PLT,NPD-A,NPD-B lightblue
@@ -73,7 +73,7 @@ graph LR
 Projects will be named according to the following naming standard:
 
 ```text
-epam-ecp-{tier}-{tenant}-{project_name}
+{org}-ecp-{tier}-{tenant}-{project_name}
 ```
 
 `{tier}` is one of `prod`, `flex`, or `sbox`.
@@ -81,9 +81,9 @@ epam-ecp-{tier}-{tenant}-{project_name}
 As an example, your initial project name might look like this:
 
 ```text
-epam-ecp-prod-pdp-app_foo
-epam-ecp-sbox-selling-app_bar
-epam-ecp-flex-ordering-sterling_1
+{org}-ecp-prod-pdp-app_foo
+{org}-ecp-sbox-selling-app_bar
+{org}-ecp-flex-ordering-sterling_1
 ```
 
 ## Default Tenant Groups
@@ -92,11 +92,11 @@ New tenants will be given a *default set of groups*, with appropriate roles for 
 
 | Group Name | Access to |
 |------------|-----------|
-|_gcp-epam-ecp-&lt;tenant&gt;-admin|Admin access for all projects in your tenancy|
-|_gcp-epam-ecp-prod-&lt;tenant&gt;-viewer|View access for your Prod tenant hierarchy|
-|_gcp-epam-ecp-flex-&lt;tenant&gt;-viewer|View access for your Non-Prod (Flex) tenant hierarchy|
-|_gcp-epam-ecp-prod-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Prod tenant hierarchy|
-|_gcp-epam-ecp-flex-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-{org}-ecp-&lt;tenant&gt;-admin|Admin access for all projects in your tenancy|
+|_gcp-{org}-ecp-prod-&lt;tenant&gt;-viewer|View access for your Prod tenant hierarchy|
+|_gcp-{org}-ecp-flex-&lt;tenant&gt;-viewer|View access for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-{org}-ecp-prod-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Prod tenant hierarchy|
+|_gcp-{org}-ecp-flex-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Flex) tenant hierarchy|
 
 ## Service Account
 
@@ -104,7 +104,7 @@ You will be provided with a _service account_ which has the authority to deploy 
 
 ## Tenant Networking
 
-With your tenancy, you can optionally have **your own VPC network** in any of your projects.  We refer to your tenant network as a _spoke_ network. This spoke network will be deployed by the _tenant factory_. Furthermore, the spoke network will be peered to the LZiiB _hub network_, thus providing you with the ability to connect to on-premises resources using internal (private) IP addressing, over a highly available interconnect.
+With your tenancy, you can optionally have **your own VPC network** in any of your projects.  We refer to your tenant network as a _spoke_ network. This spoke network will be deployed by the _tenant factory_. Furthermore, the spoke network will be peered to the LZiaB _hub network_, thus providing you with the ability to connect to on-premises resources using internal (private) IP addressing, over a highly available interconnect.
 
 You are free to:
 - Deploy resources to your own VPC networks.
@@ -114,23 +114,23 @@ If you intend to store sensitive data on your network and require perimeter cont
 
 ## Google Kubernetes Engine (GKE) Clusters
 
-- LZiiB will host regional (highly available) **multitenant GKE clusters**, managed by the Cloud Platform Team. If you tenancy requires any container orchestration, then this shared tenancy GKE cluster is the default hosting environment. Tenants within the cluster will be deployed to their own Kubernetes namespaces, fully isolated from each other.
+- LZiaB will host regional (highly available) **multitenant GKE clusters**, managed by the Cloud Platform Team. If you tenancy requires any container orchestration, then this shared tenancy GKE cluster is the default hosting environment. Tenants within the cluster will be deployed to their own Kubernetes namespaces, fully isolated from each other.
 - You can optionally deploy your own private GKE cluster to any of your tenant VPCs. This may be necessary if your tenancy requires full administrative control over the full cluster. In this scenario, you will be responsible for managing your own cluster.
 
 ![Tenant GKE clusters](/images/gke_clusters.png)
 
-- All GKE clusters deployed to LZiiB will be private.  This includes the control plane. 
+- All GKE clusters deployed to LZiaB will be private.  This includes the control plane. 
 - Access to the control plane will only be possible using a bastion host deployed to the same VPC nework as the GKE cluster itself, secured using IAP.
 
 ## Your GitLab and Infrastructure Code
 
-As a new tenant, you will need to store your project's code in GitLab. This includes all the IaC you will use to deploy resources into your LZiiB environments.  Within **EPAM's GitLab**, the hiearchy looks like this:
+As a new tenant, you will need to store your project's code in GitLab. This includes all the IaC you will use to deploy resources into your LZiaB environments.  Within **Organisation's GitLab**, the hiearchy looks like this:
 
 {{<mermaid align="left">}}
 graph TD
-    demo-lz-docs("<b>demo-lz-docs GitLab Group</b>") --> LZiiB(fa:fa-folder LZiiB) & digital(fa:fa-folder JL Digital) & other(fa:fa-folder Other Top Levels)
+    demo-lz-docs("<b>demo-lz-docs GitLab Group</b>") --> LZiaB(fa:fa-folder LZiaB) & digital(fa:fa-folder JL Digital) & other(fa:fa-folder Other Top Levels)
     subgraph STACK[" "]
-      LZiiB --> PLT(fa:fa-folder Platform) & TEN(fa:fa-folder Tenants)
+      LZiaB --> PLT(fa:fa-folder Platform) & TEN(fa:fa-folder Tenants)
       PLT ---> PltPrj["A Platform Team<br/>Project"]
       TEN --> YourTenancy(fa:fa-folder Your Tenancy) & SampleTenant(fa:fa-folder Sample Tenant)
       YourTenancy --> YourPrj[Some Project] & YourOtherPrj[Some Other Project]
@@ -148,15 +148,15 @@ graph TD
     class demo-lz-docs orange
     class digital,other grey
     class STACK lightblue
-    class LZiiB,PLT,TEN,SampleTenant,PltPrj,SamplePrj darkblue
+    class LZiaB,PLT,TEN,SampleTenant,PltPrj,SamplePrj darkblue
     class YourTenancy,YourPrj,YourOtherPrj black
 {{< /mermaid >}}
 
 You will need to do the following:
 
-1. Create GitLab user accounts for any users in your team/tenancy that do not yet have a GitLab user account.  (Follow guidance [here](https://epam.engineering/how/setting-up-a-gitlab-account/).)
+1. Create GitLab user accounts for any users in your team/tenancy that do not yet have a GitLab user account.
 1. Decide who will be your GitLab **tenancy subgroup owner(s)**.
-1. Submit a [request](/ecp/onboarding/getting-started/#how-to-raise-a-tenancy-request) to the _LZiiB (GitLab) owners_ to create your tenancy subgroup.  At this time, you will need to inform the _LZiiB owners_ of at least one _tenancy subgroup owner_.
+1. Submit a [request](/ecp/onboarding/getting-started/#how-to-raise-a-tenancy-request) to the _LZiaB (GitLab) owners_ to create your tenancy subgroup.  At this time, you will need to inform the _LZiaB owners_ of at least one _tenancy subgroup owner_.
 
 At this point, you will have the ability to create further subgroups and projects within your GitLab tenancy subgroup.
 
@@ -168,9 +168,9 @@ TODO: Cloud Platform Team to provide specific instructions on how a tenant creat
 
 ## Accessing Your Internal Resources
 
-As enforced by security policy, any GCE instances or GKE clusters you deploy within LZiiB will **only have internal IP addresses**. Consequently, it is not possible to connect to these resources directly from any network outside of your VPC.  (Which includes from the Internet.)
+As enforced by security policy, any GCE instances or GKE clusters you deploy within LZiaB will **only have internal IP addresses**. Consequently, it is not possible to connect to these resources directly from any network outside of your VPC.  (Which includes from the Internet.)
 
-Consequently, if you have a need to connect to these machines (e.g. for administrative activity), you must use the `bastion pattern`. Within LZiiB, you have the option to deploy a **bastion host** within your tenancy. (Some of you may be familiar with the term `jump box`). This machine provides a single fortified entrypoint, accessible from outside the VPC, but only to authorised users.
+Consequently, if you have a need to connect to these machines (e.g. for administrative activity), you must use the `bastion pattern`. Within LZiaB, you have the option to deploy a **bastion host** within your tenancy. (Some of you may be familiar with the term `jump box`). This machine provides a single fortified entrypoint, accessible from outside the VPC, but only to authorised users.
 
 ![Bastion](/images/bastion.png)
 
