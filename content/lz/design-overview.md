@@ -61,7 +61,7 @@ This allows **management and security policies to be applied top down** at any l
 
 Notes on this hierarchy:
 
-- The standard **naming convention** for a project is `epam-ecp-{tier}-{tenant}-{project_name}`
+- The standard **naming convention** for a project is `some-org-ecp-{tier}-{tenant}-{project_name}`
 - The `tier` can be one of `prod`, `flex` = i.e. any non-production environment, or `sbox` = sandbox
 - Ultimately, all resources in GCP are deployed into Google Cloud `projects`.
   - The project is the **basic unit of organisation** of GCP resources.
@@ -89,7 +89,7 @@ Notes on this hierarchy:
 
 LZiiB uses a **hub-and-spoke** network architecture:
 
-- **A _common VPC_ network acts as the _hub_**, and hosts centralised networking and security resources. This includes private IP connectivity, via the SLA-backed, high-bandwidth / low-latency _Interconnect_, to the EPAM on-premises network.
+- **A _common VPC_ network acts as the _hub_**, and hosts centralised networking and security resources. This includes private IP connectivity, via the SLA-backed, high-bandwidth / low-latency _Interconnect_, to the some-org on-premises network.
 - **Tenant projects will have their own _spoke_ VPC network.** Thus, tenants have full automonmy and control over resources deployed within their own VPC.
 - Tenants may be _peered_ to the hub shared VPC network. This is how tenants can:
   - Obtain private connectivity to the on-premises network (if appropriate).
@@ -133,7 +133,7 @@ However, deployment across multiple zones within a single region is insufficient
 
 ### Outbound Internet Connectivity
 
-Outbound connectivity from Google resources to the Internet is routed through EPAM Zscaler VPN. This allows centralised application of security controls.
+Outbound connectivity from Google resources to the Internet is routed through some-org Zscaler VPN. This allows centralised application of security controls.
 
 ### Inbound Connectivity from the Internet
 

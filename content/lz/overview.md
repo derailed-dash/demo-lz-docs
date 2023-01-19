@@ -8,11 +8,10 @@ weight: 5
 
 - [What is LZiiB?](#what-is-LZiiB)
 - [Motivation for LZiiB](#motivation-for-LZiiB)
-- [Useful Links](#useful-links)
 
 ## What is LZiiB
 
-LZiiB is our reusable **EPAM Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
+LZiiB is our reusable **some-org Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
 
 ## Motivation for LZiiB
 
@@ -31,7 +30,7 @@ Google Cloud Platform offers hundreds of services.  There are a staggering numbe
 LZiiB wraps these standard Google Cloud services with:
 
 - A **landing zone** and **(Google) project factory**, providing a repeatable and consistent way to deploy cloud services, using standardised tools, monitoring, preferred patterns, and repeatable infrastructure-as-code.
-- Default **security policies**, to meet the enterprise needs of EPAM.
+- Default **security policies**, to meet the enterprise needs of some-org.
 - **Enforced use of automation**, to prevent configuration drift and inconsistency, and to ensure agility.
 - Private, SLA-backed high bandwidth, low latency **connectivity** to on-premises data centre networks, for use cases that need it.  (E.g. for routine high volume data transfer.) 
 - **Identity and access management** that is integrated with our existing on-prem master identity provider, Active Directory.
@@ -40,8 +39,3 @@ LZiiB wraps these standard Google Cloud services with:
 - A standardised, centralised approach to **operational support**.
 - Policy-enforced standardised **CIS-compliant operating system images**.
 - Standardised automation to create **single-tenant and multi-tenant Kubernetes** environments, for workloads and packages that can run in containers.
-
-## Useful Links
-
-- [LZiiB Overview](https://docs.google.com/presentation/d/1HOUBPD_6JQYMeknhn6aEf_4BhGBF8qNTw5lMlckiA8I)
-- [LZiiB Evolution Project - Overview and Familiarisation](https://docs.google.com/presentation/d/1XZgoScNIjp_BL_j5Ku_1M0lerC_J8arsMLpNFeggPrg)

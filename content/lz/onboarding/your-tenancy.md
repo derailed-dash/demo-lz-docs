@@ -73,7 +73,7 @@ graph LR
 Projects will be named according to the following naming standard:
 
 ```text
-epam-ecp-{tier}-{tenant}-{project_name}
+some-org-ecp-{tier}-{tenant}-{project_name}
 ```
 
 `{tier}` is one of `prod`, `flex`, or `sbox`.
@@ -81,9 +81,9 @@ epam-ecp-{tier}-{tenant}-{project_name}
 As an example, your initial project name might look like this:
 
 ```text
-epam-ecp-prod-pdp-app_foo
-epam-ecp-sbox-selling-app_bar
-epam-ecp-flex-ordering-sterling_1
+some-org-ecp-prod-pdp-app_foo
+some-org-ecp-sbox-selling-app_bar
+some-org-ecp-flex-ordering-sterling_1
 ```
 
 ## Default Tenant Groups
@@ -92,11 +92,11 @@ New tenants will be given a *default set of groups*, with appropriate roles for 
 
 | Group Name | Access to |
 |------------|-----------|
-|_gcp-epam-ecp-&lt;tenant&gt;-admin|Admin access for all projects in your tenancy|
-|_gcp-epam-ecp-prod-&lt;tenant&gt;-viewer|View access for your Prod tenant hierarchy|
-|_gcp-epam-ecp-flex-&lt;tenant&gt;-viewer|View access for your Non-Prod (Flex) tenant hierarchy|
-|_gcp-epam-ecp-prod-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Prod tenant hierarchy|
-|_gcp-epam-ecp-flex-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-some-org-ecp-&lt;tenant&gt;-admin|Admin access for all projects in your tenancy|
+|_gcp-some-org-ecp-prod-&lt;tenant&gt;-viewer|View access for your Prod tenant hierarchy|
+|_gcp-some-org-ecp-flex-&lt;tenant&gt;-viewer|View access for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-some-org-ecp-prod-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Prod tenant hierarchy|
+|_gcp-some-org-ecp-flex-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Flex) tenant hierarchy|
 
 ## Service Account
 
@@ -124,7 +124,7 @@ If you intend to store sensitive data on your network and require perimeter cont
 
 ## Your GitLab and Infrastructure Code
 
-As a new tenant, you will need to store your project's code in GitLab. This includes all the IaC you will use to deploy resources into your LZiiB environments.  Within **EPAM's GitLab**, the hiearchy looks like this:
+As a new tenant, you will need to store your project's code in GitLab. This includes all the IaC you will use to deploy resources into your LZiiB environments.  Within **some-org's GitLab**, the hiearchy looks like this:
 
 {{<mermaid align="left">}}
 graph TD
@@ -154,7 +154,7 @@ graph TD
 
 You will need to do the following:
 
-1. Create GitLab user accounts for any users in your team/tenancy that do not yet have a GitLab user account.  (Follow guidance [here](https://epam.engineering/how/setting-up-a-gitlab-account/).)
+1. Create GitLab user accounts for any users in your team/tenancy that do not yet have a GitLab user account.  (Follow guidance [here](https://some-org.engineering/how/setting-up-a-gitlab-account/).)
 1. Decide who will be your GitLab **tenancy subgroup owner(s)**.
 1. Submit a [request](/ecp/onboarding/getting-started/#how-to-raise-a-tenancy-request) to the _LZiiB (GitLab) owners_ to create your tenancy subgroup.  At this time, you will need to inform the _LZiiB owners_ of at least one _tenancy subgroup owner_.
 

@@ -27,5 +27,3 @@ pygmentCodeFences = true
   gitlab = "username"
   github = "darren-lester-epam"
   linkedin = "username"
-  stackoverflow = "users/XXXXXXX/username"
-  youtube = "user/username" # or channel/channelname

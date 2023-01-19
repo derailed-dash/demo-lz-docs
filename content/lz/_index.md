@@ -1,6 +1,6 @@
 ---
-title: "EPAM LZ-in-a-Box (LZiiB)"
-menuTitle: "EPAM LZ-in-a-Box"
+title: "Lanzing Zone-in-a-Box (LZiiB)"
+menuTitle: "LZ-in-a-Box"
 weight: 10
 chapter: true
 ---

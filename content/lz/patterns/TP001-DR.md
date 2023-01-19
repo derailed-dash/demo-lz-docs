@@ -143,6 +143,6 @@ TBC.
 - [Architecting for DR in Google Cloud](https://cloud.google.com/architecture/disaster-recovery)
 - [Google Cloud DR Building Blocks](https://cloud.google.com/architecture/dr-scenarios-building-blocks)
 - [DR Scenarios for Data on Google Cloud](https://cloud.google.com/architecture/dr-scenarios-building-blocks)
-- [EPAM Availability Tiers - including RTOs and RPOs](https://docs.google.com/presentation/d/1HeJWoiUBGvVUYvidfhjPPELUcIkefG1aXZVkmuDShGc/edit#slide=id.g176b3abaab_4_22)
+- [some-org Availability Tiers - including RTOs and RPOs](https://docs.google.com/presentation/d/1HeJWoiUBGvVUYvidfhjPPELUcIkefG1aXZVkmuDShGc/edit#slide=id.g176b3abaab_4_22)
 
 

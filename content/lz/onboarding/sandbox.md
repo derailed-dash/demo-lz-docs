@@ -26,8 +26,8 @@ We offer two different flavours of sandbox environment:
 
 |Type|Purpose|Name|
 |----|-------|----|
-|Individual|Allows individual users to: become familiar with GCP; learn and experiment; develop; test ideas.|epam-ecp-sandbox-{firstname-lastname} 
-|Tenant|Allows tenants (typically collections of multiple users) to: conduct early PoC work with their applications; develop; experiment; to develop infrastructure-as-code; with relatively unrestricted ability to deploy resources with the Google console.|epam-ecp-sandbox-{tenant}-{project_name}|
+|Individual|Allows individual users to: become familiar with GCP; learn and experiment; develop; test ideas.|some-org-ecp-sandbox-{firstname-lastname} 
+|Tenant|Allows tenants (typically collections of multiple users) to: conduct early PoC work with their applications; develop; experiment; to develop infrastructure-as-code; with relatively unrestricted ability to deploy resources with the Google console.|some-org-ecp-sandbox-{tenant}-{project_name}|
 
 ## Considerations
 
