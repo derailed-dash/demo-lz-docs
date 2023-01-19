@@ -6,17 +6,10 @@ weight: 1
 
 The Cloud CoE is a cross-functional team, with representation from various areas.
 
-Note: this CoE doesn't yet exist! Our proposal is that it will look something like this...
-
 |Team|Responsibility in the CoE|
 |----|-------------------------|
 |Cloud Platform|This team is responsible for Cloud Operations on the LZiaB platform, including: platform run, continuous improvement, automation, platform infrastructure-as-code, LZiaB IaC pipelines, tenant creation, project creation, GitLab management for tenants, platform incident response and resolution, as well as a contact point into other teams that support the Cloud ecosystem.|
 |Cloud &amp; Hosting Architecture|Responsibe for strategic hosting capabilities and technology choices, including identifying future cloud capabilities, aligning use cases to hosting platforms, and supporting in the identification and creation of reusable hosting patterns.|
-|Integration Architecture|Responsible for integration strategy, integration technology choices, and repeatable integration patterns.|
-|Integration Centre-of-Excellence|Responsible for integration run, and integration requirements and consultation for tenants.|
-|Security Architecture|Responsible for strategic security capabilities, technology choices and secure-by-design patterns. Ensure that we have appropriate reusable security patterns that support cloud-hosted workloads.|
-|Information Security: Security Operations|Responsible for security monitoring and security incident response.|
-|Information Security: Secure-by-Design|Create the definition of both platform and tenant security requirements, as well as assurance that our solutions meet those requirements.|
 
 ## Contact Us
 
