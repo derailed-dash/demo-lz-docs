@@ -6,12 +6,12 @@ weight: 5
 
 ## Page Contents
 
-- [What is LZiiB?](#what-is-LZiiB)
-- [Motivation for LZiiB](#motivation-for-LZiiB)
+- [What is LZiaB?](#what-is-LZiaB)
+- [Motivation for LZiaB](#motivation-for-LZiaB)
 
 ## What is LZiaB
 
-LZiiB is our reusable **some-org Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
+LZiaB is our reusable **some-org Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
 
 ## Motivation for LZiaB
 
