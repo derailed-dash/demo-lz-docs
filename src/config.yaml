@@ -1,8 +1,8 @@
 # Appspot default URL is VERSION-dot-SERVICE-dot-PROJECT_ID.REGION_ID.r.appspot.com
 # We can shorten https://<svc>-dot-<prj>.nw.r.appspot.com/ to https://<svc>-dot-<prj>.appspot.com/
 # baseURL is not used when running locally on localhost
-baseURL: "https://demo-lz-docs-dot-lz-shared-portal.appspot.com"
-title: "LZ-Demo Docs"
+baseURL: "https://lz-docs-demo-dot-lz-docs-demo.appspot.com"
+title: "LZ Docs Demo"
 
 # Not advised to change these unless you know what you're doing!
 # publishDir: "../app/www"
