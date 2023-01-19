@@ -51,12 +51,12 @@ This typically refers to IaaS-type products. For example, Google Compute Engine 
 
 To ensure that we always use secure, CIS-compliant, patched operating system images, we start by taking a standard [CIS-compliant](https://cloud.google.com/container-optimized-os/docs/how-to/cis-compliance) hardened [Shielded VM image](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm) from Google.
 
-We then apply some additional some-org configuration, using Hashicorp Packer.  The result is a CIS-compliant, some-org _gold_ image for a given OS.
+We then apply some additional organisational configuration, using Hashicorp Packer.  The result is a CIS-compliant, organisation _gold_ image for a given OS.
 
 {{<mermaid align="left">}}
 graph LR
-    GImg[Google CIS-Compliant<br /> Shielded VM Image] -- Packer --> some-orgImg[some-org CIS-Compliant<br />Gold Image]
-    some-orgImg -- Push --> GImgSt[Google Image Storage]
+    GImg[Google CIS-Compliant<br /> Shielded VM Image] -- Packer --> OrgImg[Org  CIS-Compliant<br />Gold Image]
+    OrgImg -- Push --> GImgSt[Google Image Storage]
 
     classDef default fill:#2874A6,stroke:#555,color:white;    
     linkStyle default fill:none,color:black;
@@ -66,11 +66,11 @@ This process is automatic through a CI/CD pipeline, resulting in our images bein
 
 #### Deploying Instances
 
-We are now able to build GCE instances (VMs) from our image.  On LZiiB, our security policy will only permit the use of _Shielded VM images_.  I.e. Google images that are already in the _Shielded_ category, or some-org CIS-compliant gold images.
+We are now able to build GCE instances (VMs) from our image.  On LZiaB, our security policy will only permit the use of _Shielded VM images_.  I.e. Google images that are already in the _Shielded_ category, or organisational CIS-compliant gold images.
 
 {{<mermaid align="left">}}
 graph LR
-    GImg[some-org/Google CIS-Compliant<br /> Shielded VM Image] -- "Deploy<br />instance" --> GCE[GCE Instance]
+    GImg[Org/Google CIS-Compliant<br /> Shielded VM Image] -- "Deploy<br />instance" --> GCE[GCE Instance]
     GCE -- "Apply<br/> Startup Script" --> GCE_Ans[GCE Instance<br /> registered with Ansible]
     GCE_Ans -- "Apply<br/> agents and patches" --> GCE_Go[Instance<br />Ready for Use]
 

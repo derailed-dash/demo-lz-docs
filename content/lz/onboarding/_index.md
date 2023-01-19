@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-Everything you need in order to get started with LZiiB.  This includes how to get set up as a new tenant, sandboxes, project creation, how to get access to GitLab, how to deploy your own resources with Terraform, how to monitor your projects, and so on. 
+Everything you need in order to get started with LZiaB.  This includes how to get set up as a new tenant, sandboxes, project creation, how to get access to GitLab, how to deploy your own resources with Terraform, how to monitor your projects, and so on. 
 
 {{<children>}}

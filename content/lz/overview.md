@@ -1,6 +1,6 @@
 ---
-title: "LZiiB Overview"
-menuTitle: "LZiiB Overview"
+title: "LZiaB Overview"
+menuTitle: "LZiaB Overview"
 weight: 5
 ---
 
@@ -9,11 +9,11 @@ weight: 5
 - [What is LZiiB?](#what-is-LZiiB)
 - [Motivation for LZiiB](#motivation-for-LZiiB)
 
-## What is LZiiB
+## What is LZiaB
 
 LZiiB is our reusable **some-org Landing Zone-in-a-Box**.  It is a GCP-based platform, intended for the hosting of cloud-native applications, off-the-shelf products, packages, and as a migration target for existing VM-based on-prem workloads. These workloads can be Internet-facing, internally-facing, or both.
 
-## Motivation for LZiiB
+## Motivation for LZiaB
 
 Google Cloud Platform offers hundreds of services.  There are a staggering number of permutations as to how these services can be deployed. Uncontrolled deployment of such services leads to:  
 
@@ -27,7 +27,7 @@ Google Cloud Platform offers hundreds of services.  There are a staggering numbe
 - A lack of visibility of what has been deployed (leading to further “cloud sprawl” and shadow IT).
 - A lack of common access control.
 
-LZiiB wraps these standard Google Cloud services with:
+LZiaB wraps these standard Google Cloud services with:
 
 - A **landing zone** and **(Google) project factory**, providing a repeatable and consistent way to deploy cloud services, using standardised tools, monitoring, preferred patterns, and repeatable infrastructure-as-code.
 - Default **security policies**, to meet the enterprise needs of some-org.

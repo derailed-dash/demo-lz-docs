@@ -1,5 +1,5 @@
 ---
-title: "LZiiB Design Overview"
+title: "LZiaB Design Overview"
 menuTitle: "Design Overview"
 weight: 10
 ---
@@ -19,20 +19,19 @@ weight: 10
 
 ## Design Overview
 
-![LZiiB Architecture Overview](/images/LZiiB_architecture_overview.png)
+![LZiaB Architecture Overview](/images/LZiaB_architecture_overview.png)
 
 ## Organisation Resource Hierarchy
 
-The LZiiB organisation hierarchy looks like this:
+The LZiaB organisation hierarchy looks like this:
 
 {{<mermaid align="left">}}
 graph LR
-    ORG[fa:fa-sitemap some-org.com] ---> MNG[fa:fa-folder org-mng] & LZiiB[fa:fa-folder LZiiB]
-    ORG --> EDP[fa:fa-folder EDP]
-    LZiiB --> PRD[fa:fa-folder Prod] & FLEX[fa:fa-folder Flex] & SBOX[fa:fa-folder SandBox]
+    ORG[fa:fa-sitemap some-org.com] ---> MNG[fa:fa-folder org-mng] & LZiaB[fa:fa-folder LZiaB]
+    LZiaB --> PRD[fa:fa-folder Prod] & Non-PRD[fa:fa-folder Non-PRD] & SBOX[fa:fa-folder SandBox]
     PRD --> PRD-PLT[fa:fa-folder Platform] & PRD-A[fa:fa-folder Tenant A] & PRD-B[fa:fa-folder Tenant B]
     PRD-PLT --> PRD-PLT-NET[fa:fa-folder Network] & PRD-SHARED-GKE[fa:fa-folder Shared GKE]
-    FLEX --> NPD-PLT[fa:fa-folder Platform] & NPD-A[fa:fa-folder Tenant A] & NPD-B[fa:fa-folder Tenant B]
+    Non-PRD --> NPD-PLT[fa:fa-folder Platform] & NPD-A[fa:fa-folder Tenant A] & NPD-B[fa:fa-folder Tenant B]
     NPD-PLT --> NPD-PLT-NET[fa:fa-folder Network] & NPD-SHARED-GKE[fa:fa-folder Shared GKE]
     SBOX --> SBOX-A[fa:fa-folder Tenant A] & SBOX-X[fa:fa-folder Tenant X]
     SBOX-A ---> SBOX-A-1(sbox-tenantA-prj1)
@@ -41,8 +40,8 @@ graph LR
     MNG -----> M(Billing) & N(Audit) & O(Infra-as-Code)
     PRD-A ---> PRD-A-1(prod-tenantA-prj1) -.- PRD-A-2(prod-tenantA-prj2)
     PRD-B ---> PRD-B-1(prod-tenantB-prj1) -.- PRD-B-2(prod-tenantB-prj2)
-    NPD-A ---> NPD-A-1(flex-tenantA-prj1) -.- NPD-A-2(flex-tenantA-prj2)
-    NPD-B ---> NPD-B-1(flex-tenantB-prj1) -.- NPD-B-2(flex-tenantB-prj2)
+    NPD-A ---> NPD-A-1(Non-PRD-tenantA-prj1) -.- NPD-A-2(Non-PRD-tenantA-prj2)
+    NPD-B ---> NPD-B-1(Non-PRD-tenantB-prj1) -.- NPD-B-2(Non-PRD-tenantB-prj2)
     
     classDef orange fill:#ffa500,stroke:#555;
     classDef darkblue fill:#21618C,color:white;
@@ -50,8 +49,8 @@ graph LR
     classDef lightblue fill:#a3cded,stroke:#555;
     classDef green fill:#276551,color:white,stroke:#555,stroke-width:2px;
     class ORG orange
-    class MNG,LZiiB,EDP darkblue
-    class PRD,FLEX,SBOX blue
+    class MNG,LZiaB,EDP darkblue
+    class PRD,Non-PRD,SBOX blue
     class PRD-PLT,PRD-A,PRD-B,SBOX-A,SBOX-X,PRD-PLT-NET,PRD-SHARED-GKE lightblue
     class NPD-PLT,NPD-A,NPD-B,NPD-PLT-NET,NPD-SHARED-GKE lightblue
     class M,N,O,PRD-A-1,PRD-A-2,NPD-A-1,NPD-A-2,PRD-B-1,PRD-B-2,NPD-B-1,NPD-B-2,SBOX-A-1,SBOX-X-1,TEN-Y,TEN-X green
@@ -61,8 +60,8 @@ This allows **management and security policies to be applied top down** at any l
 
 Notes on this hierarchy:
 
-- The standard **naming convention** for a project is `some-org-ecp-{tier}-{tenant}-{project_name}`
-- The `tier` can be one of `prod`, `flex` = i.e. any non-production environment, or `sbox` = sandbox
+- The standard **naming convention** for a project is `{org}-ecp-{tier}-{tenant}-{project_name}`
+- The `tier` can be one of `prod`, `Non-PRD` = i.e. any non-production environment, or `sbox` = sandbox
 - Ultimately, all resources in GCP are deployed into Google Cloud `projects`.
   - The project is the **basic unit of organisation** of GCP resources.
   - Resources belong to one and only one project.
@@ -71,14 +70,14 @@ Notes on this hierarchy:
   - A tenant is **isolated** from other tenants on the platform.
   - A tenant has significant **autonomy** to deploy their own projects, resources and applicatons, within their own tenancy folders.
   - _"With great power comes great responsibility."_ The tenant is **responsible** for the resources they deploy within their own pojects.
-  - A tenant will typically have tenant folders in both `Prod` and `Flex` folders, and `Sbox` if required.
+  - A tenant will typically have tenant folders in both `Prod` and `Non-PRD` folders, and `Sbox` if required.
 
 ## Identity and Access Management
 
-- LZiiB resources may only be managed by Google Workspace or Google Cloud Identities, which are tied to the `some-org.com` domain.
+- LZiaB resources may only be managed by Google Workspace or Google Cloud Identities, which are tied to the `some-org.com` domain.
 - Users are mastered on-premise in Active Directory, and synchronised from AD to Google Cloud using one-way Google Cloud Directory Sync (GCDS).
 - Identities may be users, groups, the entire domain, or service accounts.
-  - Typically, access to resources is not granted to individual accounts, but to groups. Groups in LZiiB will be named using this **naming convention**: \
+  - Typically, access to resources is not granted to individual accounts, but to groups. Groups in LZiaB will be named using this **naming convention**: \
   `_gcp-{division}-{platform}-{tier}-{tenant}-{functional_role}`
   - **User identities** are **authenticated** to Google Cloud using **PingIdentity SSO** with multi-factor authentication.
   - **Service accounts** are associated with a given application.  They allow applications and certain GCP services (e.g. GCE instances) to access other GCP services and APIs. Organisational security policies will be enforced to restrict use of security accounts, and to - for example - prevent creation and sharing of service account keys.
@@ -87,9 +86,9 @@ Notes on this hierarchy:
 
 ## Networking
 
-LZiiB uses a **hub-and-spoke** network architecture:
+LZiaB uses a **hub-and-spoke** network architecture:
 
-- **A _common VPC_ network acts as the _hub_**, and hosts centralised networking and security resources. This includes private IP connectivity, via the SLA-backed, high-bandwidth / low-latency _Interconnect_, to the some-org on-premises network.
+- **A _common VPC_ network acts as the _hub_**, and hosts centralised networking and security resources. This includes private IP connectivity, via the SLA-backed, high-bandwidth / low-latency _Interconnect_, to the on-premises network.
 - **Tenant projects will have their own _spoke_ VPC network.** Thus, tenants have full automonmy and control over resources deployed within their own VPC.
 - Tenants may be _peered_ to the hub shared VPC network. This is how tenants can:
   - Obtain private connectivity to the on-premises network (if appropriate).
@@ -99,11 +98,11 @@ LZiiB uses a **hub-and-spoke** network architecture:
 
 {{< expand Expand-title="A note on terminology" style="bold" >}}
 
-The previous iteration of LZiiB (v1) was built around a **_Shared VPC_** which provided Subnets and Interconnect services for Tenant _service Projects_.
+The previous iteration of LZiaB (v1) was built around a **_Shared VPC_** which provided Subnets and Interconnect services for Tenant _service Projects_.
 
 The **Shared VPC** name has [an explicit meaning with regards GCP](https://cloud.google.com/vpc/docs/shared-vpc), so for the avoidance of doubt:
 
-- LZiiBv2's central Hub project will be referred to as the _common VPC_, and will provide (via VPC-peering) Interconnect connectivity.
+- LZiaBv2's central Hub project will be referred to as the _common VPC_, and will provide (via VPC-peering) Interconnect connectivity.
 - Tenant's will receive their _tenant VPC_ as part of the Tenant Factory / Onboarding process.
 - The _shared tenant VPC_ will be used for tenants with no specific network requirements.
 
@@ -124,16 +123,16 @@ The Hub-and-Spoke design exists in Production, and is replicated in Non-Producti
 **Zones** are effectively data centre campuses, with each zone separated by a few km at most. A zone can be considered a single independent failure domain within a given region.
 {{% /notice %}}
 
-High-availability is achieved by deploying resources across more than one zone within a region. Consequently, production resources in LZiiB should generally be deployed using regional resources, rather than zonal, where possible.
+High-availability is achieved by deploying resources across more than one zone within a region. Consequently, production resources in LZiaB should generally be deployed using regional resources, rather than zonal, where possible.
 
-However, deployment across multiple zones within a single region is insufficient to safeguard against a major geographic disaster event.  For this reason, any application that requires diaster recovery capability will need to be deployable across two separate regions.  To support this requirement, LZiiB has connectivity to on-premises out of two separate regions:
+However, deployment across multiple zones within a single region is insufficient to safeguard against a major geographic disaster event.  For this reason, any application that requires diaster recovery capability will need to be deployable across two separate regions.  To support this requirement, LZiaB has connectivity to on-premises out of two separate regions:
 
 - Primary region: London (`europe-west2`)
 - Standby region: Netherlands (`europe-west4`)
 
 ### Outbound Internet Connectivity
 
-Outbound connectivity from Google resources to the Internet is routed through some-org Zscaler VPN. This allows centralised application of security controls.
+Outbound connectivity from Google resources to the Internet is routed through our organisation's Zscaler VPN. This allows centralised application of security controls.
 
 ### Inbound Connectivity from the Internet
 
@@ -141,7 +140,7 @@ Outbound connectivity from Google resources to the Internet is routed through so
 Google Compute Engine (GCE) instances will only be given private IP addresses; they will **never be given external IP addresses**. Consequently, these instances are not directly reachable from any external network; this includes from the Internet.
 {{% /notice %}}
 
-Consequently, if external access is required to a LZiiB-hosted service, this **must be achieved via a load balancer**.  Routing inbound traffic through a load balancer means:
+Consequently, if external access is required to a LZiaB-hosted service, this **must be achieved via a load balancer**.  Routing inbound traffic through a load balancer means:
 
 - The load balancer acts as a reverse proxy; external clients only see the public IP address of the load balancer.
 - Internal resources do not need external IP addresses.
@@ -150,7 +149,7 @@ Consequently, if external access is required to a LZiiB-hosted service, this **m
 
 ### Access to Google APIs and Services
 
-Google Private Access is enabled on all LZiiB VPC networks.  This allows instances with no external IP address to connect to Google APIs and services, such as BigQuery, Container Registry, Cloud Datastore, Cloud Storage, and Cloud Pub/Sub.
+Google Private Access is enabled on all LZiaB VPC networks.  This allows instances with no external IP address to connect to Google APIs and services, such as BigQuery, Container Registry, Cloud Datastore, Cloud Storage, and Cloud Pub/Sub.
 
 ### GKE Control Plane Connectivity
 

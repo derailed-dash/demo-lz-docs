@@ -16,9 +16,9 @@ weight: 8
 
 Within Google Cloud, a _project_ is the most basic unit of resource organisation.  This means that any Google resources you deploy - such as networks, firewalls, load balancers, GCE instances, databases, Kubernetes clusters, serverless resources, and so on - **must belong to one, and only one, Google project**.  The project thus represents a **resource ownership** boundary, a **trust** boundary, and a **billing** boundary.
 
-Within the LZiiB environment, we can provision _sandbox_ projects. These are Google projects where individuals or tenants are free to deploy resources and applications, experiment, and learn the environment. Most notably: **sandbox projects are the only projects within LZiiB where individuals or tenants are allowed to deploy resources _manually_ and _using the Google Console_.** 
+Within the LZiaB environment, we can provision _sandbox_ projects. These are Google projects where individuals or tenants are free to deploy resources and applications, experiment, and learn the environment. Most notably: **sandbox projects are the only projects within LZiaB where individuals or tenants are allowed to deploy resources _manually_ and _using the Google Console_.** 
 
-All other projects in LZiiB require that resources are deployed via a special service account, using infrastructure-as-code. This is how we enforce our [Cloud Principles](/cloud-first/cloud-principles); particularly around automation and immutable infrastructure. 
+All other projects in LZiaB require that resources are deployed via a special service account, using infrastructure-as-code. This is how we enforce our [Cloud Principles](/cloud-first/cloud-principles); particularly around automation and immutable infrastructure. 
 
 ## Types of Sandbox
 
@@ -26,12 +26,12 @@ We offer two different flavours of sandbox environment:
 
 |Type|Purpose|Name|
 |----|-------|----|
-|Individual|Allows individual users to: become familiar with GCP; learn and experiment; develop; test ideas.|some-org-ecp-sandbox-{firstname-lastname} 
-|Tenant|Allows tenants (typically collections of multiple users) to: conduct early PoC work with their applications; develop; experiment; to develop infrastructure-as-code; with relatively unrestricted ability to deploy resources with the Google console.|some-org-ecp-sandbox-{tenant}-{project_name}|
+|Individual|Allows individual users to: become familiar with GCP; learn and experiment; develop; test ideas.|{org}-ecp-sandbox-{firstname-lastname} 
+|Tenant|Allows tenants (typically collections of multiple users) to: conduct early PoC work with their applications; develop; experiment; to develop infrastructure-as-code; with relatively unrestricted ability to deploy resources with the Google console.|{org}-ecp-sandbox-{tenant}-{project_name}|
 
 ## Considerations
 
-- By default, _individual sandboxes_ have a £50/month [hard spend cap](/LZiiB/cost-management#hard-cap-budgets). This can be adjusted, by request.
+- By default, _individual sandboxes_ have a £50/month [hard spend cap](/LZiaB/cost-management#hard-cap-budgets). This can be adjusted, by request.
 - No sensitive or production data should be stored or utilised by a sandbox project.
 
 {{% notice tip %}}
@@ -40,7 +40,7 @@ You can view detailed billing information about your project in the [billing rep
 
 ## Requesting a Sandbox Project
 
-- A **tenant sandbox** is created automatically, by the _tenant factory_, upon creation of a tenancy in LZiiB.
+- A **tenant sandbox** is created automatically, by the _tenant factory_, upon creation of a tenancy in LZiaB.
 - For an **individual sandbox**, please raise a Catalogue Request in ServiceNow with the following template and ensure relevant line manager approval is provided.
 
 ### Request Template
@@ -48,13 +48,13 @@ You can view detailed billing information about your project in the [billing rep
 **Short Description** 
 
 ```text
-LZiiB Individual Sandbox Project Request 
+LZiaB Individual Sandbox Project Request 
 ```
 
 **Details**
 
 ```text
-Please create a LZiiB individual sandbox.
+Please create a LZiaB individual sandbox.
 
 Full Name:
 Email address:
