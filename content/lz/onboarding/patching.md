@@ -39,7 +39,7 @@ Resources that are fully-managed by Google (such as Cloud Run, App Engine, Cloud
   - This includes upgrading the operating system, and Kubernetes itself.
   - This is typically non-disruptive to tenants, since we limit the number of nodes that can be upgraded in parallel. Standard K8s workload scheduling ensures that workloads remain available even when worker nodes are unavailable.
 - We use Google [Release Channels](https://cloud.google.com/kubernetes-engine/docs/concepts/release-channels) to determine when our GKE clusters are upgraded:
-  - **Non-Production (Flex and Sandbox) clusters** are enrolled in the _Regular_ release channel. This means that these servers will typically be upgraded at least 3 months after the Kubernentes release has reached _general availability_.
+  - **Non-Production (Npd and Sandbox) clusters** are enrolled in the _Regular_ release channel. This means that these servers will typically be upgraded at least 3 months after the Kubernentes release has reached _general availability_.
   - **Production clusters are enrolled in the _Stable_ release channel.** This means that these servers will typically be upgraded **2-3 months later than the Non-Prod servers.**
   - Upgrades can be rolled back, if required.
 

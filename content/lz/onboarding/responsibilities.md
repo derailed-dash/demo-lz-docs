@@ -30,7 +30,7 @@ The Cloud Platform Team will not provide ongoing management, maintenance, patchi
 |Assigning users to the tenant IAM groups|Cloud Platform Team|// TBC|
 |Provisioning the tenant folders|Cloud Platform Team|Accomplished through the Tenant Factory|
 |Provisioning tenant sandbox projects|Cloud Platform Team|Accomplished through the Tenant Factory.  Delivers a project shared by members of the tenancy, for experimentation, PoCs, and IaC assembly.|
-|Provisioning tenant non-prod (aka Flex) projects|Cloud Platform Team|Accomplished through the Tenant Factory|
+|Provisioning tenant non-prod (aka Npd) projects|Cloud Platform Team|Accomplished through the Tenant Factory|
 |Provisioning tenant prod projects|Cloud Platform Team|Accomplished through the Tenant Factory|
 |Assigning tenant IAM groups to tenant projects|Cloud Platform Team|Accomplished through the Tenant Factory|
 |Provisioning of a VPC (network) within your project(s)|Cloud Platform Team|Accomplished through the Tenant Factory|

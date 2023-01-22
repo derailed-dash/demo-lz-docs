@@ -89,7 +89,7 @@ When deploying resources in your tenancy using the _project factory_ and _IaC_, 
 |tenant|Your tenancy|Any|
 |service|Project or service|Any|
 |responsible|Cost Centre|Any|
-|layer|Whether prod, non-prod, or sandbox|prod / flex / sbox|
+|layer|Whether prod, non-prod, or sandbox|prod / npd / sbox|
 
 In addition, you can add your own custom tenant labels to your resources. Specify any labels you want to use when you request your tenancy.  For example, you might consider labels such as:
 

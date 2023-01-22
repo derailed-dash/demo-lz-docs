@@ -39,17 +39,17 @@ As a new tenant, folders will be created for you in each of the _Prod_, _Flex_, 
 
 {{<mermaid align="left">}}
 graph LR
-    org.com --> PRD[fa:fa-folder Prod] & FLEX[fa:fa-folder Flex] & SBOX[fa:fa-folder SandBox]
+    org.com --> PRD[fa:fa-folder Prod] & NPD[fa:fa-folder Npd] & SBOX[fa:fa-folder SandBox]
     PRD --> PRD-PLT[fa:fa-folder Platform] & PRD-A[fa:fa-folder Tenant A] & PRD-B[fa:fa-folder Tenant B]
-    FLEX --> NPD-PLT[fa:fa-folder Platform] & NPD-A[fa:fa-folder Tenant A] & NPD-B[fa:fa-folder Tenant B]
+    NPD --> NPD-PLT[fa:fa-folder Platform] & NPD-A[fa:fa-folder Tenant A] & NPD-B[fa:fa-folder Tenant B]
     SBOX --> SBOX-A[fa:fa-folder Tenant A] & SBOX-X[fa:fa-folder Tenant X]
     subgraph TEN-PRD["."]
       PRD-A ---> PRD-A-1(prod-tenantA-prj1)
       PRD-A-1 -.- PRD-A-2(prod-tenantA-prj2)   
     end
     subgraph TEN-NPD["."]
-      NPD-A ---> NPD-A-1(flex-tenantA-prj1)
-      NPD-A-1 -.- NPD-A-2(flex-tenantA-prj2)
+      NPD-A ---> NPD-A-1(npd-tenantA-prj1)
+      NPD-A-1 -.- NPD-A-2(npd-tenantA-prj2)
     end
     subgraph TEN-SBOX["."]
       SBOX-A ---> SBOX-A-1(sbox-tenantA-prj1)
@@ -63,7 +63,7 @@ graph LR
     classDef green fill:#276551,color:white,stroke:#555,stroke-width:2px;
     class ORG orange
     class MNG,LZiaB,EDP darkblue
-    class PRD,FLEX,SBOX blue
+    class PRD,NPD,SBOX blue
     class PRD-PLT,PRD-A,PRD-B,SBOX-A,SBOX-X,PRD-PLT-NET lightblue
     class NPD-PLT,NPD-A,NPD-B lightblue
     class M,N,O,PRD-A-1,PRD-A-2,NPD-A-1,NPD-A-2,SBOX-A-1,TEN-Y green
@@ -76,14 +76,14 @@ Projects will be named according to the following naming standard:
 {org}-ecp-{tier}-{tenant}-{project_name}
 ```
 
-`{tier}` is one of `prod`, `flex`, or `sbox`.
+`{tier}` is one of `prod`, `npd`, or `sbox`.
 
 As an example, your initial project name might look like this:
 
 ```text
 {org}-ecp-prod-pdp-app_foo
 {org}-ecp-sbox-selling-app_bar
-{org}-ecp-flex-ordering-sterling_1
+{org}-ecp-npd-ordering-sterling_1
 ```
 
 ## Default Tenant Groups
@@ -94,9 +94,9 @@ New tenants will be given a *default set of groups*, with appropriate roles for 
 |------------|-----------|
 |_gcp-{org}-ecp-&lt;tenant&gt;-admin|Admin access for all projects in your tenancy|
 |_gcp-{org}-ecp-prod-&lt;tenant&gt;-viewer|View access for your Prod tenant hierarchy|
-|_gcp-{org}-ecp-flex-&lt;tenant&gt;-viewer|View access for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-{org}-ecp-npd-&lt;tenant&gt;-viewer|View access for your Non-Prod (Npd) tenant hierarchy|
 |_gcp-{org}-ecp-prod-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Prod tenant hierarchy|
-|_gcp-{org}-ecp-flex-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Flex) tenant hierarchy|
+|_gcp-{org}-ecp-npd-&lt;tenant&gt;-support|Support access (including logging and monitoring access) for your Non-Prod (Npd) tenant hierarchy|
 
 ## Service Account
 

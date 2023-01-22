@@ -24,7 +24,7 @@ As a tenant:
 - The Cloud Platform Team will provide you with a `Prod` folder, a `Non-Prod` folder, and a `Sandbox` folder, as illustrated in the [resource hierarchy](/LZiaB/design-overview#organisation-resource-hierarchy).
 - You will be provided with projects in these folders:
   - Within your sandbox projects, you will have relatively unrestricted ability to deploy resources, in any manner you decide.
-  - Within your non-prod (flex) and prod projects, deployment of resources will only be possible using a dedicated service account, which will run your own Infrastrucutre-as-Code (IaC), in the form of Terraform configurations.  You will generally not be able to deploy resources in these environments using the Google Cloud Console.
+  - Within your non-prod (npd) and prod projects, deployment of resources will only be possible using a dedicated service account, which will run your own Infrastrucutre-as-Code (IaC), in the form of Terraform configurations.  You will generally not be able to deploy resources in these environments using the Google Cloud Console.
 
 ## Onboarding Steps
 
