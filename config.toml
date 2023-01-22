@@ -1,4 +1,5 @@
-baseurl = "https://derailed-dash.github.io/demo-lz-docs"
+# baseurl = "https://derailed-dash.github.io/demo-lz-docs"
+baseurl = "https://lz-docs.just2good.co.uk"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
@@ -22,8 +23,5 @@ pygmentCodeFences = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [Author]
-  name = "Darren Lester"
-  email = "darren_lester@epam.com"
-  gitlab = "username"
-  github = "darren-lester-epam"
-  linkedin = "username"
+  name = "Dazbo"
+  github = "derailed-dash"
