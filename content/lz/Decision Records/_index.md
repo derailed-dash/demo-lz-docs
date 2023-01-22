@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-Decision records relating to the LZiiB platform.
+Decision records relating to the LZiaB platform.
 
 {{<children>}}

@@ -1,5 +1,5 @@
 ---
-title: "Lanzing Zone-in-a-Box (LZiiB)"
+title: "Landing Zone-in-a-Box (LZiaB)"
 menuTitle: "LZ-in-a-Box"
 weight: 10
 chapter: true
@@ -7,6 +7,6 @@ chapter: true
 
 # {{< param title >}}
 
-What is LZiiB, why should you use it, and where do you start?
+What is LZiaB, why should you use it, and where do you start?
 
 {{<children>}}
