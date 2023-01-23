@@ -23,11 +23,12 @@ This is the documentation repo for Landing Zone Docs Demo.  Here you will find:
 ```
 .
 ├── app/                         - The template for the Google App Engine Python web applicaton
-├── content/                     - Where the site content lives. THIS IS WHAT YOU UPDATE
+├── content/                     - Where the site source content lives. THIS IS WHAT YOU UPDATE
 ├── src/                         - Hugo configuration and themes
 ├── themes/                      - In case we want to build using GitLab Hugo project
-├── .github/workflows/pages.yml  - The GitHub Action CI/CD pipeline configuration
-├── .gitlab-ci.yml               - The GitLab CI/CD pipeline configuration
+├── .github/workflows/pages.yml  - The GitHub Action CI/CD pipeline configuration (->GitHub Pages)
+├── .gitlab-ci.yml               - The GitLab CI/CD pipeline configuration (->AppEngine)
+├── config.toml                  - Configuration for Hugo to build the website from the source
 ├── README.md                    - This file
 ├── functions.sh                 - Bash helper functions, used by the pipeline
 ├── local.Dockerfile             - Hugo container image, for local site development
