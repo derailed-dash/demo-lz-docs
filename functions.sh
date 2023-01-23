@@ -50,19 +50,8 @@ function commit_and_push() {
     chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -H 'gitlab.com' >> ~/.ssh/known_hosts 2>/dev/null
 
-    # # re-clone this repo so that we are not detached from HEAD
-    # git clone ${REPO_URL} HEAD 
-
-    # # copy new content into master clone, then commit&push as normal
-    # cp -r content/audit/${AUDIT_REPORT_MONTH} HEAD/content/audit/${AUDIT_REPORT_MONTH}
-    # cp content/audit/${AUDIT_REPORT_MONTH}-Audit-Report.md HEAD/content/audit/${AUDIT_REPORT_MONTH}-Audit-Report.md
-
-    # cd HEAD/
-
     git add ${MD_FILE}
-
     git -c user.name="gitlab-ci" -c user.email="gitlab-ci@gitlab.com" commit --author="gitlab-ci <gitlab-ci@gitlab.com>" -m "Auto-generated Platform Tenants doc triggered by CI. Repo: ${CI_PROJECT_NAME}, job: ${CI_JOB_NAME}"
 
     git push ${REPO_URL} HEAD:master
-
 }
